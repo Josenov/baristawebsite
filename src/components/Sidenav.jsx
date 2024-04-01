@@ -12,7 +12,7 @@ const Sidenav = () => {
     }
   return (
     <div>
-        <AiOutlineMenu onClick={handleBurguerMenu} className='top-8 right-4 text-xl z-[99] md:hidden text-black fixed'/>
+        <AiOutlineMenu onClick={handleBurguerMenu} className='top-10 right-5 text-xl z-[99] md:hidden text-black fixed'/>
     </div>
   )
 }

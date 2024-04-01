@@ -1,21 +1,20 @@
 import Carousel from "./components/Carousel"
 import Footer from "./components/Footer"
 import Header from "./components/Header"
+import Home from "./pages/Home"
 
 
 function App() {
   
 
   return (
-    <>
+    <div className="overflow-hidden">
       <Header/>
       <Carousel/>
-      <div className="h-screen">
-
-      </div>
+      <Home/>
       <Footer/>
       
-    </>
+    </div>
   )
 }
 
