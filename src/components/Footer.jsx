@@ -4,9 +4,9 @@ const Footer = () => {
     return (
         <>
             <footer className="">
-                <div className=" px-4 py-16 mx-auto sm:px-6 lg:px-8 bg-[#C8A178] w-full">
+                <div className=" px-4 py-16 mx-auto sm:px-6 lg:px-8 bg-[#C8A178] w-full ">
                     <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-                        <div>
+                        <div className='mt-[-50px]'>
                             <img src="/coffeelogo.png" className="mr-5 h-16" alt="logo" />
                             <p className="max-w-xs mt-4 text-sm text-white">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, accusantium.

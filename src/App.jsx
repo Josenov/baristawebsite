@@ -10,9 +10,8 @@ function App() {
   return (
     <div className="overflow-hidden">
       <Header/>
-      
-      <Home/>
       <Carousel/>
+      <Home/>
       <Footer/>
       
     </div>
