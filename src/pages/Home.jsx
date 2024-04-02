@@ -1,5 +1,8 @@
 import { BiPaperPlane, BiWallet, BiHeadphone, BiGift } from "react-icons/bi"
 import TopProductCard from "../components/TopProductCard"
+import SpecialProductCard from "../components/SpecialProductCard"
+import BlogCard from "../components/BlogCard"
+import BrandsCarousel from "../components/BrandsCarousel"
 
 const Home = () => {
     return (
@@ -22,7 +25,7 @@ const Home = () => {
 
                 </div>
                 <div className="flex gap-2 items-center">
-                    <BiGift className="w-8 h-8 md:w-10 md:h-10 text-[#C8A178]"/>
+                    <BiGift className="w-8 h-8 md:w-10 md:h-10 text-[#C8A178]" />
                     <div>
                         <p>CUPONES DE DESCUENTO</p>
                         <p className="text-gray-400">Ofrecemos cupones especiales</p>
@@ -30,7 +33,7 @@ const Home = () => {
 
                 </div>
                 <div className="flex gap-2 items-center">
-                    <BiHeadphone className="w-8 h-8 md:w-10 md:h-10 text-[#C8A178]"/>
+                    <BiHeadphone className="w-8 h-8 md:w-10 md:h-10 text-[#C8A178]" />
                     <div>
                         <p>ATENCION AL CLIENTE 24/7</p>
                         <p className="text-gray-400">Llamanos al 0800-888-888</p>
@@ -65,20 +68,70 @@ const Home = () => {
                         <button className=' text-gray-500  p-2 rounded-full w-36 h-8 mt-3 font-semibold flex items-center justify-center'>Nuevos</button>
                         <button className=' text-gray-500   p-2 rounded-full w-36 h-8 mt-3 font-semibold flex items-center justify-center'>Mas vendidos</button>
 
-                        
 
+
+
+                    </div>
+
+                    <div className="flex flex-col md:flex-row items-center justify-center mt-5 mb-5">
+                        <TopProductCard />
+                        <TopProductCard />
+                        <TopProductCard />
+                        <TopProductCard />
+                    </div>
+
+
+                </div>
+
+                <div className="flex flex-wrap gap-2 mb-2">
+                    <div className="flex flex-col gap-2">
+                        <img className="h-96 object-cover w-96" src="https://img.freepik.com/foto-gratis/vista-maquina-hacer-cafe_23-2150698727.jpg" alt="" />
+                        <img className="h-96 object-cover  w-96" src="https://cafeplatino.com/wp-content/uploads/2022/01/como-hacer-un-capuccino-perfecto-.jpg" alt="" />
+                    </div>
+                    <img src="https://img.freepik.com/fotos-premium/mano-barista-cafe-vertido-taza-cafeteria-cafetera-maquina-closeup-portafiltro-profesional-ai-generativa_771335-59187.jpg" alt="" />
+                    <div className="flex flex-col gap-2">
+                        <img className="h-96 object-cover w-96" src="https://www.somoselcafe.com.ar/img/novedades/20.jpg" alt="" />
+                        <img className="h-96 object-cover w-96" src="https://s0.smartresize.com/wallpaper/738/342/HD-wallpaper-coffee-coffee-maker-hands-barista.jpg" alt="" />
+                    </div>
+                </div>
+
+                <div className="mt-16 flex items-center  flex-col">
+                    <h1>Productos Especiales</h1>
+                    
+
+                    <div className="flex flex-col md:flex-row items-center justify-center mt-5 mb-5">
+                        <SpecialProductCard />
+                        <SpecialProductCard />
+                        <SpecialProductCard />
+                        <SpecialProductCard />
+                    </div>
+
+                    
+
+
+                </div>
+
+                <div className="flex items-center  flex-col">
+                    <h1>Ultimos Blogs</h1>
+                    
+
+                    <div className="flex flex-col md:flex-row items-center justify-center mt-5 mb-5 gap-10">
+                        <BlogCard/>
+                        <BlogCard/>
+                        <BlogCard/>
                         
                     </div>
+
                     
-                    <div className="flex flex-col md:flex-row items-center justify-center mt-5 mb-5">
-                    <TopProductCard/>
-                    <TopProductCard/>
-                    <TopProductCard/>
-                    <TopProductCard/>
-                    </div>
-                    
-                    
+
+
                 </div>
+
+                <div>
+                    <BrandsCarousel/>
+                </div>
+
+
             </div>
 
 
