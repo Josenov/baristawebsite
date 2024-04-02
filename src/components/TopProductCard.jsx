@@ -6,7 +6,7 @@ const TopProductCard = () => {
         <div className="flex flex-wrap items-center justify-center rounded-lg mb-24">
             
             <div className=" w-[200px] h-[350px] flex  flex-col rounded-lg">
-            <p className='bg-[#C8A178] rounded-full text-white w-10 text-center text-sm m-2 '>-20%</p>
+            <p className='bg-[#C8A178] rounded-full text-white w-10 text-center text-sm font-sans m-2 '>-20%</p>
                 <div className='flex items-center justify-center flex-col rounded-lg'>
                 <img className='object-cover h-64' src="https://img.pikbest.com/origin/09/39/61/99BpIkbEsTHm7.png!sw800" alt="" />
                 <div className='flex mt-2 p-2'>

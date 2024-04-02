@@ -35,7 +35,7 @@ const Header = () => {
 
 
             </div>
-            <div className=' h-12  bg-[#C8A178] flex items-center justify-between'>
+            <div className=' h-12  bg-[#C8A178] flex items-center justify-between font-pro'>
                 <div className='hidden font-semibold text-sm md:flex gap-5 pl-20'>
                     <a href="">HOME</a>
                     <a href="">MOCKA HELADO</a>

@@ -6,7 +6,7 @@ import BrandsCarousel from "../components/BrandsCarousel"
 
 const Home = () => {
     return (
-        <div className='mt-[70px] md:mt-[250px]'>
+        <div className='mt-[70px] md:mt-[250px] font-pro'>
             <div className='flex flex-wrap items-center gap-4  md:justify-between p-10 ml-5 font-semibold'>
                 <div className="flex gap-2 items-center">
                     <BiPaperPlane className="w-8 h-8 md:w-10 md:h-10 text-[#C8A178]" />
@@ -48,17 +48,17 @@ const Home = () => {
                     <div>
                         <img src="https://media.istockphoto.com/id/1411994205/es/foto/caf%C3%A9-moca-helado-con-crema-en-un-vaso-alto-y-granos-de-caf%C3%A9-portafiltro-tamper-y-jarra-de.jpg?s=612x612&w=0&k=20&c=G4-ZrqUMguJ1PXTC_P8YT4pnaoOwEpAwmCfErGstOR8=" className="h-48 w-72 object-cover rounded-xl" alt="" />
                         <p className="mt-[-100px] text-white flex items-center justify-center">Cafe Mocha</p>
-                        <a href="" className=" text-white flex items-center justify-center text-lg font-normal">ver mas</a>
+                        <a href="" className="  flex items-center justify-center text-sm text-gray-300 mt-2">ver mas</a>
                     </div>
                     <div>
                         <img src="https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2023/12/07/cafe-expresso.jpeg" className="h-48 w-72 object-cover rounded-xl" alt="" />
                         <p className="mt-[-100px] text-white flex items-center justify-center">Espresso</p>
-                        <a href="" className=" text-white flex items-center justify-center text-lg font-normal">ver mas</a>
+                        <a href="" className="  flex items-center justify-center text-sm text-gray-300 mt-2">ver mas</a>
                     </div>
                     <div>
                         <img src="https://cdn.pixabay.com/photo/2016/08/03/05/33/latte-1565931_1280.jpg" className="h-48 w-72 object-cover rounded-xl" alt="" />
                         <p className="mt-[-100px] text-white flex items-center justify-center">Capuccino</p>
-                        <a href="" className=" text-white flex items-center justify-center text-lg font-normal">ver mas</a>
+                        <a href="" className="  flex items-center justify-center text-sm text-gray-300 mt-2">ver mas</a>
                     </div>
                 </div>
                 <div className="mt-24 flex items-center  flex-col">
@@ -83,7 +83,7 @@ const Home = () => {
 
                 </div>
 
-                <div className="flex flex-wrap gap-2 mb-2">
+                <div className="flex flex-wrap md:flex-nowrap gap-2 mb-2">
                     <div className="flex flex-col gap-2">
                         <img className="h-96 object-cover w-96" src="https://img.freepik.com/foto-gratis/vista-maquina-hacer-cafe_23-2150698727.jpg" alt="" />
                         <img className="h-96 object-cover  w-96" src="https://cafeplatino.com/wp-content/uploads/2022/01/como-hacer-un-capuccino-perfecto-.jpg" alt="" />
@@ -95,11 +95,11 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className="mt-16 flex items-center  flex-col">
+                <div className="mt-16 flex items-center flex-col">
                     <h1>Productos Especiales</h1>
                     
 
-                    <div className="flex flex-col md:flex-row items-center justify-center mt-5 mb-5">
+                    <div className="flex flex-col md:flex-row items-center justify-center mt-5 mb-5 md:gap-5">
                         <SpecialProductCard />
                         <SpecialProductCard />
                         <SpecialProductCard />

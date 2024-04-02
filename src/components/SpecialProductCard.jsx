@@ -16,7 +16,7 @@ const SpecialProductCard = () => {
                     <AiFillStar className='h-3 text-[#C8A178]'/>
                     <AiFillStar className='h-3 text-[#C8A178]'/>
                 </div>
-                <p className='text-lg'>Cafe Coretto</p>
+                <p className='text-lg'>Cafe Corretto</p>
                 <div className='flex items-center'>
                 <p className='text-lg font-bold'>$10000</p>
                 {/* <del className='text-sm text-slate-500'>$6500</del> */}
