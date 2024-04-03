@@ -36,7 +36,7 @@ const Header = () => {
 
             </div>
             <div className=' h-12  bg-[#C8A178] flex items-center justify-between font-pro'>
-                <div className='hidden font-semibold text-sm md:flex gap-5 pl-20'>
+                <div className='hidden font-thin text-sm md:flex gap-5 pl-20'>
                     <a href="">HOME</a>
                     <a href="">MOCKA HELADO</a>
                     <a href="">ESPRESSO</a>
@@ -45,7 +45,7 @@ const Header = () => {
                     <a href="">BLOGS</a>
                 </div>
                 <div className='flex items-center pl-3 md:pr-10 gap-1'>
-                    <input className='rounded-full w-48 h-8 md:w-56 pl-5' type="text" placeholder='buscar...' />
+                    <input className='rounded-full w-48 h-8 md:w-56 pl-5 text-black' type="text" placeholder='buscar...' />
                     <AiOutlineSearch className='h-6 w-6 text-white'/>
                 </div>
 

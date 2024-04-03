@@ -12,7 +12,7 @@ const Home = () => {
                     <BiPaperPlane className="w-8 h-8 md:w-10 md:h-10 text-[#C8A178]" />
                     <div>
                         <p>ENVIO SIN CARGO</p>
-                        <p className="text-gray-400">en compras por encima de $10000</p>
+                        <p className="text-gray-400 text-sm md:text-md">en compras por encima de $10000</p>
                     </div>
 
                 </div>
@@ -20,7 +20,7 @@ const Home = () => {
                     <BiWallet className="w-8 h-8 md:w-10 md:h-10 text-[#C8A178]" />
                     <div>
                         <p>CONTRA REEMBOLSO</p>
-                        <p className="text-gray-400">Tu compra protegida 100%</p>
+                        <p className="text-gray-400 text-sm md:text-md">Tu compra protegida 100%</p>
                     </div>
 
                 </div>
@@ -28,7 +28,7 @@ const Home = () => {
                     <BiGift className="w-8 h-8 md:w-10 md:h-10 text-[#C8A178]" />
                     <div>
                         <p>CUPONES DE DESCUENTO</p>
-                        <p className="text-gray-400">Ofrecemos cupones especiales</p>
+                        <p className="text-gray-400 text-sm md:text-md">Ofrecemos cupones especiales</p>
                     </div>
 
                 </div>
@@ -36,7 +36,7 @@ const Home = () => {
                     <BiHeadphone className="w-8 h-8 md:w-10 md:h-10 text-[#C8A178]" />
                     <div>
                         <p>ATENCION AL CLIENTE 24/7</p>
-                        <p className="text-gray-400">Llamanos al 0800-888-888</p>
+                        <p className="text-gray-400 text-sm md:text-md">Llamanos al 0800-888-888</p>
                     </div>
 
                 </div>

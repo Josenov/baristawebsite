@@ -35,7 +35,7 @@ const Footer = () => {
                             </div>
                             <div className='flex flex-col text-white mt-5 justify-center'>
                                 <p className='text-sm'>Ingresa tu mail para recibir novedades:</p>
-                                <input type="email" className='rounded-full mt-4 h-8 w-64' />
+                                <input type="email" className='rounded-full mt-4 h-8 w-64 text-black' />
                                 <button className='bg-black text-white  p-2 rounded-full w-36 h-8 mt-3 font-semibold flex items-center justify-center'>Suscribirme</button>
                             </div>
                         </div>
