@@ -12,21 +12,21 @@ const Sidenav = () => {
   }
   return (
     <div>
-      <AiOutlineMenu onClick={handleBurguerMenu} className='top-10 left-5 text-xl z-[99] md:hidden text-black fixed ' />
+      <AiOutlineMenu onClick={handleBurguerMenu} className='top-10 right-5 text-xl z-[99] md:hidden text-black fixed ' />
       <div className='flex gap-5'>
-        <AiOutlineUser className='top-10 right-16 text-2xl z-[99] md:hidden text-black  fixed' />
-        <AiOutlineShoppingCart className='top-10 right-5 text-2xl z-[99] md:hidden text-black fixed' />
+        <AiOutlineUser className='top-10 left-16 text-2xl z-[99] md:hidden text-black  fixed' />
+        <AiOutlineShoppingCart className='top-10 left-5 text-2xl z-[99] md:hidden text-black fixed' />
       </div>
 
       {
         burguerMenu ? (
 
-          <div className='fixed md:hidden font-pro   h-screen   bg-[#C8A178] flex flex-col items-center justify-start text-white w-[70%] z-[80]'>
+          <div className='fixed md:hidden font-pro right-0   h-screen   bg-[#C8A178] flex flex-col items-center justify-start text-white w-[70%] z-[80]'>
             <div className='flex items-center justify-center gap-2 mt-[100px] '>
               <input className='rounded-full w-48 h-10 md:w-56 pl-5 text-black' type="text" placeholder='buscar...' />
               <AiOutlineSearch className='h-6 w-6 text-white' />
             </div>
-            <div className='flex flex-col text-2xl p-2 m-5 gap-5 mt-10 mb-10'>
+            <div className='flex flex-col text-2xl p-2 m-5 gap-5 mt-5 '>
 
               <a href="">Home</a>
               <a href="">Productos Top</a>
@@ -38,8 +38,8 @@ const Sidenav = () => {
             
               
 
-            <div className='bg-[#B0662E] mt-[-20px] h-screen w-full flex items-center justify-center flex-col'>
-            <div className='flex items-center gap-2 border border-solid border-white bg-transparent p-2'>
+            <div className='bg-[#B0662E] mt-[-10px] h-screen w-full flex items-center justify-center flex-col'>
+            <div className='flex items-center gap-2 border border-solid border-white bg-transparent p-2 mt-[-50px]'>
                 <AiOutlineUser className='text-lg' />
                 <a className='' href="">Iniciar Sesion</a>
               </div>
