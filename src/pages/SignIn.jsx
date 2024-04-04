@@ -10,7 +10,7 @@ const SignIn = () => {
 
             <div className="bg-gray-100 flex flex-col md:flex-row justify-center items-center h-screen font-pro">
 
-                <RouterLink to='/'  className="md: hidden border border-solid bg-transparent text-black font-thin rounded-md ">Volver a Home</RouterLink>
+                <RouterLink to='/'  className="md:hidden border border-solid bg-transparent text-black font-thin rounded-md ">Volver a Home</RouterLink>
 
                 <div className="w-1/2 h-screen hidden lg:block">
                     <img className="object-cover h-full w-full" src="https://w0.peakpx.com/wallpaper/162/1011/HD-wallpaper-coffee-by-window-street-coffee-window-cup-ai-art.jpg" alt="Placeholder Image"  />
