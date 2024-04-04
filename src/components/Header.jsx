@@ -28,8 +28,8 @@ const Header = () => {
                 
                 
                 <div className='hidden md:flex gap-5'>
-                    <a href=""> <AiOutlineUser className='w-8 h-8 text-[#C8A178]' /></a>
-                    <a href=""><AiOutlineShoppingCart className='w-8 h-8 text-[#C8A178]' /></a>
+                    <RouterLink to="/signin"> <AiOutlineUser className='w-8 h-8 text-[#C8A178]' /></RouterLink>
+                    <RouterLink to="/signin"><AiOutlineShoppingCart className='w-8 h-8 text-[#C8A178]' /></RouterLink>
                     
                     
                     

@@ -30,7 +30,7 @@ const Sidenav = () => {
               <input className='rounded-full w-48 h-10 md:w-56 pl-5 text-black' type="text" placeholder='buscar...' />
               <AiOutlineSearch className='h-6 w-6 text-white' />
             </div>
-            <div className='flex flex-col text-2xl p-2 m-5 gap-5 mt-5 '>
+            <div className='flex flex-col text-xl p-2 m-5 gap-5 mt-5 '>
 
               <RouterLink to='/' onClick={handleBurguerMenu}>Home</RouterLink>
               <RouterLink to='/topProducts' onClick={handleBurguerMenu}>Productos Top</RouterLink>
