@@ -1,6 +1,9 @@
 import React from 'react'
 import { AiOutlineUser, AiOutlineShoppingCart, AiOutlinePhone, AiOutlineSearch } from 'react-icons/ai'
 import Sidenav from './Sidenav'
+import { Link as RouterLink } from 'react-router-dom'
+
+
 
 const Header = () => {
     return (
@@ -18,7 +21,10 @@ const Header = () => {
                     
                 </div>
 
+                <RouterLink to='/'>
                 <img src="/coffeelogo.png" className='w-16 h-16 md:w-20 md:h-20' alt="" />
+                </RouterLink>
+                
                 
                 
                 <div className='hidden md:flex gap-5'>
@@ -49,10 +55,10 @@ const Header = () => {
                     <AiOutlineSearch className='h-6 w-6 text-white'/>
                 </div>
 
-
+                
                 
             </div>
-
+            
             <Sidenav className="md:hidden"/>
 
         </>

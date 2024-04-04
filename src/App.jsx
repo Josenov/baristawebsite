@@ -1,20 +1,12 @@
-import Carousel from "./components/Carousel"
-import Footer from "./components/Footer"
-import Header from "./components/Header"
-import Home from "./pages/Home"
+import { RouterProvider } from "react-router-dom"
+import {router} from "./router/router"
 
 
 function App() {
   
 
   return (
-    <div className="overflow-hidden">
-      <Header/>
-      <Carousel/>
-      <Home/>
-      <Footer/>
-      
-    </div>
+    <RouterProvider router = {router}/>
   )
 }
 

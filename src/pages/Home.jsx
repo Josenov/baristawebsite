@@ -3,10 +3,12 @@ import TopProductCard from "../components/TopProductCard"
 import SpecialProductCard from "../components/SpecialProductCard"
 import BlogCard from "../components/BlogCard"
 import BrandsCarousel from "../components/BrandsCarousel"
+import Carousel from '../components/Carousel'
 
 const Home = () => {
     return (
         <div className='mt-[70px] md:mt-[250px] font-pro'>
+            <Carousel/>
             <div className='flex flex-wrap items-center gap-4  md:justify-between p-10 ml-5 font-semibold'>
                 <div className="flex gap-2 items-center">
                     <BiPaperPlane className="w-8 h-8 md:w-10 md:h-10 text-[#C8A178]" />
