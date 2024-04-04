@@ -1,9 +1,10 @@
 import React from 'react'
+import SpecialProductCard from '../components/SpecialProductCard'
 
 const SpecialProducts = () => {
   return (
-    <div className='h-screen'>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio labore, fugit deleniti repudiandae incidunt id illum quos laborum fuga temporibus ipsa sed eveniet, officia ullam ex. Voluptatum sit doloremque dolor.</p>
+    <div className='h-screen flex items-center justify-center'>
+        <SpecialProductCard/>
     </div>
   )
 }

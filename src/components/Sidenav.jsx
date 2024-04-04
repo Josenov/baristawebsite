@@ -8,13 +8,22 @@ import { Link as RouterLink } from 'react-router-dom';
 const Sidenav = () => {
   const [burguerMenu, setBurguerMenu] = useState(false);
 
+
+
   const handleBurguerMenu = () => {
     setBurguerMenu(!burguerMenu);
     console.log("state changed")
   }
+
+  
+
+
   return (
-    <div>
-      <AiOutlineMenu onClick={handleBurguerMenu} className='top-10 right-5 text-xl z-[99] md:hidden text-black fixed ' />
+    <>
+
+    
+    <div  >
+      <AiOutlineMenu onClick={handleBurguerMenu}  className='top-10 right-5 text-xl z-[99] md:hidden text-black fixed ' />
       <div className='flex gap-5'>
         
         <RouterLink to='signin'><AiOutlineUser className='top-10 left-16 text-2xl z-[99] md:hidden text-black  fixed' /></RouterLink>
@@ -23,9 +32,12 @@ const Sidenav = () => {
       </div>
 
       {
-        burguerMenu ? (
 
-          <div className='fixed md:hidden font-pro right-0   h-screen   bg-[#C8A178] flex flex-col items-center justify-start text-white w-[70%] z-[80]'>
+       
+        
+        burguerMenu ? (
+          
+          <div  className='fixed md:hidden font-pro right-0   h-screen   bg-[#C8A178] flex flex-col items-center justify-start text-white w-[70%] z-[80]'>
             <div className='flex items-center justify-center gap-2 mt-[100px] '>
               <input className='rounded-full w-48 h-10 md:w-56 pl-5 text-black' type="text" placeholder='buscar...' />
               <AiOutlineSearch className='h-6 w-6 text-white' />
@@ -77,6 +89,8 @@ const Sidenav = () => {
       }
 
     </div>
+
+    </>
   )
 }
 
