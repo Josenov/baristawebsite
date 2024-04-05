@@ -21,7 +21,7 @@ const TopCategoryCard = () => {
             
         }}
         modules={[Pagination, Navigation]}
-        className="mySwiper rounded-md  w-screen text-center flex items-center justify-center  h-56 md:hidden " >
+        className="mySwiper rounded-md  w-screen text-center flex items-center justify-center  h-56 md:hidden overflow-hidden " >
 
             <div className="flex w-full items-center justify-center md:gap-5 font-bold">
                 <SwiperSlide className='ml-2 '>

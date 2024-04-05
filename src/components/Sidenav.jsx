@@ -23,7 +23,7 @@ const Sidenav = () => {
 
     
     <div  >
-      <AiOutlineMenu onClick={handleBurguerMenu}  className='top-10 right-14 text-xl z-[99] md:hidden text-black fixed ' />
+      <AiOutlineMenu onClick={handleBurguerMenu}  className='top-10 right-6 text-xl z-[99] md:hidden text-black fixed ' />
       <div className='flex gap-5'>
         
         <RouterLink to='signin'><AiOutlineUser className='top-10 left-16 text-2xl z-[99] md:hidden text-black  fixed' /></RouterLink>
