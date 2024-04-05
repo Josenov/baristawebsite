@@ -4,6 +4,7 @@ import SpecialProductCard from "../components/SpecialProductCard"
 import BlogCard from "../components/BlogCard"
 import BrandsCarousel from "../components/BrandsCarousel"
 import Carousel from '../components/Carousel'
+import TopCategoryCard from "../components/TopCategoryCard"
 
 const Home = () => {
     return (
@@ -46,7 +47,7 @@ const Home = () => {
 
             <div className="flex items-center flex-col md:justify-center text-3xl gap-5 md:mt-[50px]">
                 <h1>Categorias Top</h1>
-                <div className="flex flex-wrap items-center justify-center gap-12 md:gap-5 font-bold">
+                <div className="md:flex flex-wrap items-center justify-center gap-12 md:gap-5 font-bold hidden ">
                     <div>
                         <img src="https://media.istockphoto.com/id/1411994205/es/foto/caf%C3%A9-moca-helado-con-crema-en-un-vaso-alto-y-granos-de-caf%C3%A9-portafiltro-tamper-y-jarra-de.jpg?s=612x612&w=0&k=20&c=G4-ZrqUMguJ1PXTC_P8YT4pnaoOwEpAwmCfErGstOR8=" className="h-48 w-72 object-cover rounded-xl" alt="" />
                         <p className="mt-[-100px] text-white flex items-center justify-center">Cafe Mocha</p>
@@ -63,6 +64,10 @@ const Home = () => {
                         <a href="" className="  flex items-center justify-center text-sm text-gray-300 mt-2">ver mas</a>
                     </div>
                 </div>
+                <div className="flex justify-center ml-16">
+                <TopCategoryCard/>
+                </div>
+                
                 <div className="mt-24 flex items-center  flex-col">
                     <h1>Productos Top</h1>
                     <div className="text-lg flex flex-col md:flex-row  gap-5">
