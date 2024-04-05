@@ -8,7 +8,7 @@ const SignIn = () => {
         <>
 
 
-            <div className="bg-gray-100 flex flex-col md:flex-row justify-center items-center h-screen mt-[-50px] font-pro">
+            <div className="bg-gray-100 flex flex-col md:flex-row justify-center items-center  h-screen font-pro">
 
                 <RouterLink to='/'  className="md:hidden border border-solid border-black p-2 bg-transparent text-black font-thin rounded-md ">Volver a Home</RouterLink>
 
