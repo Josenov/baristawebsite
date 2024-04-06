@@ -26,19 +26,19 @@ const HomeCarousel = () => {
             <div className="flex items-center justify-center text-center  ">
                 
                 <SwiperSlide>
-                    <img className="h-96 object-cover w-96" src="https://img.freepik.com/foto-gratis/vista-maquina-hacer-cafe_23-2150698727.jpg" alt="" />
+                    <img className="h-96 object-cover w-full" src="https://img.freepik.com/foto-gratis/vista-maquina-hacer-cafe_23-2150698727.jpg" alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className="h-96 object-cover  w-96" src="https://cafeplatino.com/wp-content/uploads/2022/01/como-hacer-un-capuccino-perfecto-.jpg" alt="" />
+                    <img className="h-96 object-cover  w-full" src="https://cafeplatino.com/wp-content/uploads/2022/01/como-hacer-un-capuccino-perfecto-.jpg" alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className="h-96 object-cover w-96" src="https://img.freepik.com/fotos-premium/mano-barista-cafe-vertido-taza-cafeteria-cafetera-maquina-closeup-portafiltro-profesional-ai-generativa_771335-59187.jpg" alt="" />
+                    <img className="h-96 object-cover w-full" src="https://img.freepik.com/fotos-premium/mano-barista-cafe-vertido-taza-cafeteria-cafetera-maquina-closeup-portafiltro-profesional-ai-generativa_771335-59187.jpg" alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className="h-96 object-cover w-96" src="https://www.somoselcafe.com.ar/img/novedades/20.jpg" alt="" />
+                    <img className="h-96 object-cover w-full" src="https://www.somoselcafe.com.ar/img/novedades/20.jpg" alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className="h-96 object-cover w-96" src="https://s0.smartresize.com/wallpaper/738/342/HD-wallpaper-coffee-coffee-maker-hands-barista.jpg" alt="" />
+                    <img className="h-96 object-cover w-full" src="https://s0.smartresize.com/wallpaper/738/342/HD-wallpaper-coffee-coffee-maker-hands-barista.jpg" alt="" />
                 </SwiperSlide>
 
             </div>

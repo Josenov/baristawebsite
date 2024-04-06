@@ -12,7 +12,7 @@ const Home = () => {
     return (
         <div className=' font-pro'>
             <Carousel />
-            <div className='flex flex-wrap md:mt-56 items-center gap-4  md:justify-between p-10 ml-5 font-semibold'>
+            <div className='flex flex-wrap md:mt-56 items-center gap-4  md:justify-between p-10 ml-12 font-semibold'>
                 <div className="flex gap-2 items-center">
                     <BiPaperPlane className="w-8 h-8 md:w-10 md:h-10 text-[#C8A178]" />
                     <div>
@@ -66,8 +66,8 @@ const Home = () => {
                         <a href="" className="  flex items-center justify-center text-sm text-gray-300 mt-2">ver mas</a>
                     </div>
                 </div>
-                <div className="flex justify-center ml-16">
-                    <TopCategoryCard />
+                <div className="flex items-center justify-center  ml-36">
+                    <TopCategoryCard  />
                 </div>
 
                 <div className="md:mt-24 flex items-center  flex-col mt-[24px]">
@@ -291,7 +291,7 @@ const Home = () => {
                         
 
 
-                        <div >
+                        <div className="w-full" >
                             <BlogCard />
 
 

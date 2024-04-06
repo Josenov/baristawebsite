@@ -11,8 +11,17 @@ const BlogCard = () => {
         <Swiper
             centeredSlides={true}
             loop={true}
-            slidesPerView={1}
+            slidesPerView={1} 
             spaceBetween={10}
+            breakpoints={{
+                768:{
+                    slidesPerView:3,
+                    centeredSlides:true,
+                    loop:true,
+                    
+
+                }
+            }}  
             pagination={{
                 clickable: true,
                 dynamicBullets: true
@@ -20,7 +29,7 @@ const BlogCard = () => {
 
             }}
             modules={[Pagination, Navigation]}
-            className="mySwiper w-96  rounded-md md:w-[300px] h-[650px]  flex items-center justify-center  md:h-full  mt-10  " >
+            className="mySwiper w-96  rounded-md md:w-[990px] h-[650px]    md:h-[550x]  mt-10" >
 
             <div className='mb-10'>
                 <SwiperSlide className="max-w-sm md:w-full rounded  shadow-lg">
