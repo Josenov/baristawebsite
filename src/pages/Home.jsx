@@ -70,7 +70,7 @@ const Home = () => {
                     <TopCategoryCard />
                 </div>
 
-                <div className="mt-24 flex items-center  flex-col">
+                <div className="md:mt-24 flex items-center  flex-col mt-[24px]">
                     <h1>Productos Top</h1>
 
                     <div className="text-lg  md:text-lg flex flex-row  md:gap-5">
@@ -84,9 +84,9 @@ const Home = () => {
                     </div>
                     
 
-                    <div className="hidden md:flex  items-center justify-center  rounded-lg gap-10 mb-10 mt-5 ">
+                    <div className="hidden md:flex  items-center justify-center  rounded-lg gap-10 mb-10 mt-5">
 
-                <div className=" w-[200px] h-[350px]  flex  flex-col rounded-lg">
+                <div className=" w-[200px] h-[350px]  flex  flex-col rounded-lg ">
                     <p className='bg-[#C8A178] rounded-full text-white w-10 text-center text-sm font-sans m-2 ml-10'>-20%</p>
                     <div className='flex items-center justify-center flex-col rounded-lg'>
                     
@@ -109,7 +109,7 @@ const Home = () => {
                 <div className=" w-[200px] h-[350px] flex  flex-col rounded-lg">
                     <p className='bg-[#C8A178] rounded-full text-white w-10 text-center text-sm font-sans m-2 ml-10'>-30%</p>
                     <div className='flex items-center justify-center flex-col rounded-lg'>
-                        <img className='object-cover h-64' src="https://e7.pngegg.com/pngimages/812/341/png-clipart-cappuccino-cappuccino-thumbnail.png" alt="" />
+                        <img className='object-cover h-full' src="https://i.pinimg.com/originals/5a/d5/10/5ad510d619e6c797c4914de4a72c2859.jpg" alt="" />
                         <div className='flex mt-2 p-2'>
                             <AiFillStar className='h-3 text-[#C8A178]' />
                             <AiFillStar className='h-3 text-[#C8A178]' />
@@ -193,7 +193,7 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className="mt-16 flex items-center flex-col">
+                <div className="md:mt-16 mt-10 flex items-center flex-col">
                     <h1>Productos Especiales</h1>
                     <div className="hidden md:flex items-center justify-center text-center gap-10 ">
 

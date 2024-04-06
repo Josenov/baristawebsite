@@ -20,9 +20,9 @@ const BlogCard = () => {
 
             }}
             modules={[Pagination, Navigation]}
-            className="mySwiper w-96 rounded-md md:w-[300px] flex items-center justify-center md:h-full  mt-10  " >
+            className="mySwiper w-96  rounded-md md:w-[300px] h-[650px]  flex items-center justify-center  md:h-full  mt-10  " >
 
-            <div className=''>
+            <div className='mb-10'>
                 <SwiperSlide className="max-w-sm md:w-full rounded  shadow-lg">
                     <img className="w-full rounded-lg" src="https://media.istockphoto.com/id/1134471347/photo/couple-relaxing-in-a-cafe.jpg?s=612x612&w=0&k=20&c=1VQ5AKVNA9PoE2OhYLU9bPKcYP7GmgUHShxPMiB3On8=" alt="Sunset in the mountains" />
                     <div className="px-6 py-4">
@@ -43,7 +43,7 @@ const BlogCard = () => {
                     <div className="px-6 py-4">
                         <div className="font-bold text-xl mb-2">Lo recomendare a mis amigos</div>
                         <p className="text-gray-700 text-base">
-                            "MoonBean es mi lugar favorito para relajarme después de un largo día. El ambiente acogedor y la deliciosa variedad de cafés hacen que siempre vuelva por más. El personal es..."
+                            "MoonBean es mi lugar favorito para relajarme después de un largo día. El ambiente acogedor y la deliciosa variedad de cafés hacen que siempre vuelva por más. El personal es super amable y lo mejor..."
                         </p>
                         <button className='text-sm bg-[#C8A178] text-white  p-2 rounded-full w-24 h-8 mt-3 font-semibold flex items-center justify-center'>Leer Mas</button>
                     </div>

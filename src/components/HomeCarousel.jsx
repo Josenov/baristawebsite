@@ -19,7 +19,7 @@ const HomeCarousel = () => {
 
             }}
             modules={[Pagination, Navigation]}
-            className="mySwiper rounded-md  w-screen text-center flex items-center justify-center  h-full md:hidden " >
+            className="mySwiper rounded-md  w-screen text-center flex items-center justify-center  h-full md:hidden mt-[-50px] " >
 
 
 

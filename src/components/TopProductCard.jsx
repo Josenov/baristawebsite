@@ -52,7 +52,7 @@ const TopProductCard = () => {
                 <SwiperSlide className=" w-[200px] h-[350px] flex  flex-col rounded-lg">
                     <p className='bg-[#C8A178] rounded-full text-white w-10 text-center text-sm font-sans m-2 ml-20'>-30%</p>
                     <div className='flex items-center justify-center flex-col rounded-lg'>
-                        <img className='object-cover h-64' src="https://e7.pngegg.com/pngimages/812/341/png-clipart-cappuccino-cappuccino-thumbnail.png" alt="" />
+                        <img className='object-cover h-64' src="https://i.pinimg.com/originals/5a/d5/10/5ad510d619e6c797c4914de4a72c2859.jpg" alt="" />
                         <div className='flex mt-2 p-2'>
                             <AiFillStar className='h-3 text-[#C8A178]' />
                             <AiFillStar className='h-3 text-[#C8A178]' />
