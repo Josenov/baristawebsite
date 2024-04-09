@@ -12,39 +12,47 @@ const Home = () => {
     return (
         <div className=' font-pro'>
             <Carousel />
-            <div className='flex flex-wrap md:mt-56 items-center gap-4  md:justify-between p-10 ml-12 font-semibold'>
-                <div className="flex gap-2 items-center">
-                    <BiPaperPlane className="w-8 h-8 md:w-10 md:h-10 text-[#C8A178]" />
-                    <div>
-                        <p>ENVIO SIN CARGO</p>
-                        <p className="text-gray-400 text-sm md:text-md">en compras por encima de $10000</p>
-                    </div>
+            <div className='flex flex-wrap md:mt-64 items-center justify-center gap-4 m-10 mt-32 md:gap-24 text-left  font-semibold'>
 
-                </div>
-                <div className="flex gap-2 items-center">
-                    <BiWallet className="w-8 h-8 md:w-10 md:h-10 text-[#C8A178]" />
-                    <div>
-                        <p>CONTRA REEMBOLSO</p>
-                        <p className="text-gray-400 text-sm md:text-md">Tu compra protegida 100%</p>
-                    </div>
+                <div className="flex gap-8">
+                    <div className="flex  gap-2 items-center">
+                        <BiPaperPlane className="w-20 h-20 md:w-10 md:h-10 text-[#C8A178]" />
+                        <div>
+                            <p className="text-sm">ENVIO SIN CARGO</p>
+                            <p className="text-gray-400 text-sm md:text-md">en compras por encima de $10000</p>
+                        </div>
 
-                </div>
-                <div className="flex gap-2 items-center">
-                    <BiGift className="w-8 h-8 md:w-10 md:h-10 text-[#C8A178]" />
-                    <div>
-                        <p>CUPONES DE DESCUENTO</p>
-                        <p className="text-gray-400 text-sm md:text-md">Ofrecemos cupones especiales</p>
                     </div>
+                    <div className="flex gap-2 items-center">
+                        <BiWallet className="w-16 h-16 md:w-10 md:h-10 text-[#C8A178]" />
+                        <div>
+                            <p className="text-sm">CONTRA REEMBOLSO</p>
+                            <p className="text-gray-400 text-sm md:text-md">Tu compra protegida 100%</p>
+                        </div>
 
-                </div>
-                <div className="flex gap-2 items-center">
-                    <BiHeadphone className="w-8 h-8 md:w-10 md:h-10 text-[#C8A178]" />
-                    <div>
-                        <p>ATENCION AL CLIENTE 24/7</p>
-                        <p className="text-gray-400 text-sm md:text-md">Llamanos al 0800-888-888</p>
                     </div>
-
                 </div>
+
+                <div className="flex gap-8">
+                    <div className="flex gap-2 items-center">
+                        <BiGift className="w-16 h-16 md:w-10 md:h-10 text-[#C8A178]" />
+                        <div>
+                            <p className="text-sm">CUPONES DE DESCUENTO</p>
+                            <p className="text-gray-400 text-sm md:text-md">Ofrecemos cupones especiales</p>
+                        </div>
+
+                    </div>
+                    <div className="flex gap-2 items-center">
+                        <BiHeadphone className="w-16 h-16 md:w-10 md:h-10 text-[#C8A178]" />
+                        <div>
+                            <p className="text-sm">ATENCION AL CLIENTE 24/7</p>
+                            <p className="text-gray-400 text-sm md:text-md">Llamanos al 0800-888-888</p>
+                        </div>
+
+                    </div>
+                </div>
+
+
             </div>
 
             <div className="flex items-center flex-col md:justify-center text-3xl gap-5 md:mt-[50px]">
@@ -66,8 +74,8 @@ const Home = () => {
                         <a href="" className="  flex items-center justify-center text-sm text-gray-300 mt-2">ver mas</a>
                     </div>
                 </div>
-                <div className="flex items-center justify-center  ml-36">
-                    <TopCategoryCard  />
+                <div className="flex items-center justify-center  ">
+                    <TopCategoryCard />
                 </div>
 
                 <div className="md:mt-24 flex items-center  flex-col mt-[24px]">
@@ -82,91 +90,91 @@ const Home = () => {
 
 
                     </div>
-                    
+
 
                     <div className="hidden md:flex  items-center justify-center  rounded-lg gap-10 mb-10 mt-5">
 
-                <div className=" w-[200px] h-[350px]  flex  flex-col rounded-lg ">
-                    <p className='bg-[#C8A178] rounded-full text-white w-10 text-center text-sm font-sans m-2 ml-10'>-20%</p>
-                    <div className='flex items-center justify-center flex-col rounded-lg'>
-                    
-                        <img className='object-cover h-64' src="https://img.pikbest.com/origin/09/39/61/99BpIkbEsTHm7.png!sw800" alt="" />
-                        <div className='flex mt-2 p-2'>
-                            <AiFillStar className='h-3 text-[#C8A178]' />
-                            <AiFillStar className='h-3 text-[#C8A178]' />
-                            <AiFillStar className='h-3 text-[#C8A178]' />
-                            <AiFillStar className='h-3 text-[#C8A178]' />
-                            <AiFillStar className='h-3 text-[#C8A178]' />
-                        </div>
-                        <p className='text-lg'>Cafe Irlandes</p>
-                        <div className='flex items-center gap-1'>
-                            <p className='text-lg font-bold'>$5200</p>
-                            <del className='text-sm text-slate-500'>$6500</del>
-                        </div>
+                        <div className=" w-[200px] h-[350px]  flex  flex-col rounded-lg ">
+                            <p className='bg-[#C8A178] rounded-full text-white w-10 text-center text-sm font-sans m-2 ml-10 font-pro'>-20%</p>
+                            <div className='flex items-center justify-center flex-col rounded-lg'>
 
+                                <img className='object-cover h-64' src="https://img.pikbest.com/origin/09/39/61/99BpIkbEsTHm7.png!sw800" alt="" />
+                                <div className='flex mt-2 p-2'>
+                                    <AiFillStar className='h-3 text-[#C8A178]' />
+                                    <AiFillStar className='h-3 text-[#C8A178]' />
+                                    <AiFillStar className='h-3 text-[#C8A178]' />
+                                    <AiFillStar className='h-3 text-[#C8A178]' />
+                                    <AiFillStar className='h-3 text-[#C8A178]' />
+                                </div>
+                                <p className='text-lg'>Cafe Irlandes</p>
+                                <div className='flex items-center gap-1'>
+                                    <p className='text-lg font-bold'>$5200</p>
+                                    <del className='text-sm text-slate-500'>$6500</del>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div className=" w-[200px] h-[350px] flex  flex-col rounded-lg">
+                            <p className='bg-[#C8A178] rounded-full text-white w-10 text-center text-sm font-sans m-2 ml-10 font-pro'>-30%</p>
+                            <div className='flex items-center justify-center flex-col rounded-lg'>
+                                <img className='object-scale-down h-64' src="https://i.pinimg.com/originals/5a/d5/10/5ad510d619e6c797c4914de4a72c2859.jpg" alt="" />
+                                <div className='flex mt-2 p-2'>
+                                    <AiFillStar className='h-3 text-[#C8A178]' />
+                                    <AiFillStar className='h-3 text-[#C8A178]' />
+                                    <AiFillStar className='h-3 text-[#C8A178]' />
+                                    <AiFillStar className='h-3 text-[#C8A178]' />
+                                    <AiFillStar className='h-3 text-[#C8A178]' />
+                                </div>
+                                <p className='text-lg'>Capuccino</p>
+                                <div className='flex items-center gap-1'>
+                                    <p className='text-lg font-bold'>$3500</p>
+                                    <del className='text-sm text-slate-500'>$5000</del>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div className=" w-[200px] h-[350px] flex  flex-col rounded-lg">
+                            <p className='bg-[#C8A178] rounded-full text-white w-10 text-center text-sm font-sans m-2 ml-10 font-pro'>-10%</p>
+                            <div className='flex items-center justify-center flex-col rounded-lg'>
+                                <img className='object-cover h-64' src="https://americancookiesbrasil.com.br/wp-content/uploads/2022/06/mocha.png" alt="" />
+                                <div className='flex mt-2 p-2'>
+                                    <AiFillStar className='h-3 text-[#C8A178]' />
+                                    <AiFillStar className='h-3 text-[#C8A178]' />
+                                    <AiFillStar className='h-3 text-[#C8A178]' />
+                                    <AiFillStar className='h-3 text-[#C8A178]' />
+                                    <AiFillStar className='h-3 text-[#C8A178]' />
+                                </div>
+                                <p className='text-lg'>Cafe Mocha</p>
+                                <div className='flex items-center gap-1'>
+                                    <p className='text-lg font-bold'>$6750</p>
+                                    <del className='text-sm text-slate-500'>$7500</del>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div className=" w-[200px] h-[350px] flex  flex-col rounded-lg">
+                            <p className='bg-[#C8A178] rounded-full text-white w-10 text-center text-sm font-sans m-2 ml-10 font-pro'>-5%</p>
+                            <div className='flex items-center justify-center flex-col rounded-lg'>
+                                <img className='object-cover h-64' src="https://img.freepik.com/premium-photo/cup-coffee_957255-61.jpg" alt="" />
+                                <div className='flex mt-2 p-2'>
+                                    <AiFillStar className='h-3 text-[#C8A178]' />
+                                    <AiFillStar className='h-3 text-[#C8A178]' />
+                                    <AiFillStar className='h-3 text-[#C8A178]' />
+                                    <AiFillStar className='h-3 text-[#C8A178]' />
+                                    <AiFillStar className='h-3 text-[#C8A178]' />
+                                </div>
+                                <p className='text-lg'>Cafe Espresso</p>
+                                <div className='flex items-center gap-1'>
+                                    <p className='text-lg font-bold'>$4275</p>
+                                    <del className='text-sm text-slate-500'>$4500</del>
+                                </div>
+
+                            </div>
+
+                        </div>
                     </div>
-                </div>
-                <div className=" w-[200px] h-[350px] flex  flex-col rounded-lg">
-                    <p className='bg-[#C8A178] rounded-full text-white w-10 text-center text-sm font-sans m-2 ml-10'>-30%</p>
-                    <div className='flex items-center justify-center flex-col rounded-lg'>
-                        <img className='object-scale-down h-64' src="https://i.pinimg.com/originals/5a/d5/10/5ad510d619e6c797c4914de4a72c2859.jpg" alt="" />
-                        <div className='flex mt-2 p-2'>
-                            <AiFillStar className='h-3 text-[#C8A178]' />
-                            <AiFillStar className='h-3 text-[#C8A178]' />
-                            <AiFillStar className='h-3 text-[#C8A178]' />
-                            <AiFillStar className='h-3 text-[#C8A178]' />
-                            <AiFillStar className='h-3 text-[#C8A178]' />
-                        </div>
-                        <p className='text-lg'>Capuccino</p>
-                        <div className='flex items-center gap-1'>
-                            <p className='text-lg font-bold'>$3500</p>
-                            <del className='text-sm text-slate-500'>$5000</del>
-                        </div>
-
-                    </div>
-
-                </div>
-                <div className=" w-[200px] h-[350px] flex  flex-col rounded-lg">
-                    <p className='bg-[#C8A178] rounded-full text-white w-10 text-center text-sm font-sans m-2 ml-10'>-10%</p>
-                    <div className='flex items-center justify-center flex-col rounded-lg'>
-                        <img className='object-cover h-64' src="https://americancookiesbrasil.com.br/wp-content/uploads/2022/06/mocha.png" alt="" />
-                        <div className='flex mt-2 p-2'>
-                            <AiFillStar className='h-3 text-[#C8A178]' />
-                            <AiFillStar className='h-3 text-[#C8A178]' />
-                            <AiFillStar className='h-3 text-[#C8A178]' />
-                            <AiFillStar className='h-3 text-[#C8A178]' />
-                            <AiFillStar className='h-3 text-[#C8A178]' />
-                        </div>
-                        <p className='text-lg'>Cafe Mocha</p>
-                        <div className='flex items-center gap-1'>
-                            <p className='text-lg font-bold'>$6750</p>
-                            <del className='text-sm text-slate-500'>$7500</del>
-                        </div>
-
-                    </div>
-
-                </div>
-                <div className=" w-[200px] h-[350px] flex  flex-col rounded-lg">
-                    <p className='bg-[#C8A178] rounded-full text-white w-10 text-center text-sm font-sans m-2 ml-10'>-5%</p>
-                    <div className='flex items-center justify-center flex-col rounded-lg'>
-                        <img className='object-cover h-64' src="https://img.freepik.com/premium-photo/cup-coffee_957255-61.jpg" alt="" />
-                        <div className='flex mt-2 p-2'>
-                            <AiFillStar className='h-3 text-[#C8A178]' />
-                            <AiFillStar className='h-3 text-[#C8A178]' />
-                            <AiFillStar className='h-3 text-[#C8A178]' />
-                            <AiFillStar className='h-3 text-[#C8A178]' />
-                            <AiFillStar className='h-3 text-[#C8A178]' />
-                        </div>
-                        <p className='text-lg'>Cafe Espresso</p>
-                        <div className='flex items-center gap-1'>
-                            <p className='text-lg font-bold'>$4275</p>
-                            <del className='text-sm text-slate-500'>$4500</del>
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
 
                     <div >
                         <TopProductCard />
@@ -273,46 +281,46 @@ const Home = () => {
 
                             </div>
                         </div>
-                        </div>
+                    </div>
 
-                        <div className="flex flex-col md:flex-row items-center justify-center h-full mt-5 mb-5 md:gap-5">
-                            <SpecialProductCard />
-
-                        </div>
-
-
-
+                    <div className="flex flex-col md:flex-row items-center justify-center h-full mt-5 mb-5 md:gap-5">
+                        <SpecialProductCard />
 
                     </div>
 
-                    <div className="flex items-center  flex-col">
-                        <h1>Ultimos Blogs</h1>
 
-                        
-
-
-                        <div className="w-full" >
-                            <BlogCard />
-
-
-                        </div>
-
-
-
-
-                    </div>
-
-                    <div className="flex flex-col justify-center text-center">
-                        <p className="text-sm">Nos Recomiendan:</p>
-                        <BrandsCarousel />
-                    </div>
 
 
                 </div>
 
+                <div className="flex items-center  flex-col">
+                    <h1>Ultimos Blogs</h1>
+
+
+
+
+                    <div className="w-full" >
+                        <BlogCard />
+
+
+                    </div>
+
+
+
+
+                </div>
+
+                <div className="flex flex-col justify-center text-center">
+                    <p className="text-sm">Nos Recomiendan:</p>
+                    <BrandsCarousel />
+                </div>
+
 
             </div>
-            )
+
+
+        </div>
+    )
 }
 
-            export default Home
+export default Home

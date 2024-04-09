@@ -11,9 +11,9 @@ const Header = () => {
 
             <div className='h-24 w-full  flex items-center justify-center bg-[#F9F6F1]  md:justify-between md:p-4 fixed md:relative z-[99]'>
                         
-                <div className='hidden md:flex md:items-center md:gap-2'>
+                <div className='hidden md:flex md:items-center md:gap-2 '>
                     <AiOutlinePhone className='w-8 h-8 text-[#C8A178]' />
-                    <div className='flex flex-col text-sm'>
+                    <div className='flex flex-col text-sm font-bold'>
                     <p>Estamos para ayudarte</p>
                     <p>Tel.: 0800-888-888</p>
                     </div>
@@ -33,7 +33,7 @@ const Header = () => {
                     
                     
                     
-                    <div className='text-xs'>
+                    <div className='text-xs font-bold'>
                     <p>Compra en linea</p>
                     <p>Envio sin cargo</p>
                     </div>

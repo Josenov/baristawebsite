@@ -6,7 +6,7 @@ const Footer = () => {
             <footer className="">
                 <div className=" px-4 py-16 mx-auto sm:px-6 lg:px-8 bg-[#C8A178] w-full ">
                     <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-                        <div className='mt-[-50] flex  flex-col items-center'>
+                        <div className='flex  flex-col items-center mt-[-40px]'>
                             <img  src="/coffeelogo.png" className="h-16" alt="logo" />
                             <p className="max-w-xs mt-4 text-sm text-white">
                                 Visitanos en nuestras redes sociales!
@@ -39,8 +39,8 @@ const Footer = () => {
                                 <button className='bg-black text-white  p-2 rounded-full w-36 h-8 mt-3 font-semibold flex items-center justify-center'>Suscribirme</button>
                             </div>
                         </div>
-                        <div className="grid grid-cols-1 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-4">
-                            <div>
+                        <div className="grid grid-cols-2 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-4">
+                            <div className=''>
                                 <p className="font-medium">
                                     Compañia
                                 </p>

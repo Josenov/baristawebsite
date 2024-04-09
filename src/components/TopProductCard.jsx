@@ -29,11 +29,11 @@ const TopProductCard = () => {
         >
             <div className="flex flex-wrap items-center justify-center rounded-lg ">
 
-                <SwiperSlide className=" flex  flex-col rounded-lg">
-                    <p className='bg-[#C8A178] rounded-full text-white w-10 text-center text-sm font-sans m-2 ml-20'>-20%</p>
+                <SwiperSlide className=" flex  flex-col rounded-lg ">
+                    <p className='bg-[#C8A178] rounded-full text-white w-12 text-center text-sm font-sans m-2 ml-20 font-pro'>-20%</p>
                     <div className='flex items-center justify-center flex-col rounded-lg'>
                     
-                        <img className='object-cover h-64' src="https://img.pikbest.com/origin/09/39/61/99BpIkbEsTHm7.png!sw800" alt="" />
+                        <img className='object-cover h-64' src="https://p7.hiclipart.com/preview/583/473/297/caffe-mocha-latte-cream-irish-coffee-coffee.jpg" alt="" />
                         <div className='flex mt-2 p-2'>
                             <AiFillStar className='h-3 text-[#C8A178]' />
                             <AiFillStar className='h-3 text-[#C8A178]' />
@@ -50,7 +50,7 @@ const TopProductCard = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide className=" w-[200px] h-[350px] flex  flex-col rounded-lg">
-                    <p className='bg-[#C8A178] rounded-full text-white w-10 text-center text-sm font-sans m-2 ml-20'>-30%</p>
+                    <p className='bg-[#C8A178] rounded-full text-white w-12 text-center text-sm font-sans m-2 ml-20 font-pro'>-30%</p>
                     <div className='flex items-center justify-center flex-col rounded-lg'>
                         <img className='object-cover h-64' src="https://i.pinimg.com/originals/5a/d5/10/5ad510d619e6c797c4914de4a72c2859.jpg" alt="" />
                         <div className='flex mt-2 p-2'>
@@ -70,7 +70,7 @@ const TopProductCard = () => {
 
                 </SwiperSlide>
                 <SwiperSlide className=" w-[200px] h-[350px] flex  flex-col rounded-lg">
-                    <p className='bg-[#C8A178] rounded-full text-white w-10 text-center text-sm font-sans m-2 ml-20'>-10%</p>
+                    <p className='bg-[#C8A178] rounded-full text-white w-12 text-center text-sm font-sans m-2 ml-20 font-pro'>-10%</p>
                     <div className='flex items-center justify-center flex-col rounded-lg'>
                         <img className='object-cover h-64' src="https://americancookiesbrasil.com.br/wp-content/uploads/2022/06/mocha.png" alt="" />
                         <div className='flex mt-2 p-2'>
