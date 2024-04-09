@@ -33,7 +33,7 @@ const TopProductCard = () => {
                     <p className='bg-[#C8A178] rounded-full text-white w-12 text-center text-sm font-sans m-2 ml-20 font-pro'>-20%</p>
                     <div className='flex items-center justify-center flex-col rounded-lg'>
                     
-                        <img className='object-cover h-64' src="https://p7.hiclipart.com/preview/583/473/297/caffe-mocha-latte-cream-irish-coffee-coffee.jpg" alt="" />
+                        <img className='object-cover h-64' src="https://img.freepik.com/fotos-premium/vaso-cafe-irlandes-aislado-sobre-fondo-blanco_185193-52146.jpg" alt="" />
                         <div className='flex mt-2 p-2'>
                             <AiFillStar className='h-3 text-[#C8A178]' />
                             <AiFillStar className='h-3 text-[#C8A178]' />

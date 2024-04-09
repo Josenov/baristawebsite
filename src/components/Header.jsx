@@ -13,7 +13,7 @@ const Header = () => {
                         
                 <div className='hidden md:flex md:items-center md:gap-2 '>
                     <AiOutlinePhone className='w-8 h-8 text-[#C8A178]' />
-                    <div className='flex flex-col text-sm font-bold'>
+                    <div className='flex flex-col text-xs font-bold font-pro'>
                     <p>Estamos para ayudarte</p>
                     <p>Tel.: 0800-888-888</p>
                     </div>
@@ -33,7 +33,7 @@ const Header = () => {
                     
                     
                     
-                    <div className='text-xs font-bold'>
+                    <div className='text-xs font-bold font-pro'>
                     <p>Compra en linea</p>
                     <p>Envio sin cargo</p>
                     </div>
@@ -43,7 +43,7 @@ const Header = () => {
             </div>
             <div className=' h-12  bg-[#C8A178] flex items-center justify-between font-pro'>
                 <div className='hidden font-thin text-sm md:flex gap-5 pl-20'>
-                    <a href="">HOME</a>
+                    <RouterLink to="/">HOME</RouterLink>
                     <a href="">MOCKA HELADO</a>
                     <a href="">ESPRESSO</a>
                     <a href="">CAPUCCINO</a>

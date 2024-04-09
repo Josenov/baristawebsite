@@ -37,7 +37,7 @@ const BlogCard = () => {
                     <div className="px-6 py-4">
                         <div className="font-bold text-xl mb-2">Encuentro de almas afines</div>
                         <p className="text-gray-700 text-base">
-                            "Moonbean no es solo un lugar para tomar café, es un punto de encuentro para almas afines. Me encanta venir aquí y sumergirme en conversaciones profundas con amigos nuevos y viejos. La variedad de bebidas es impresionante, pero lo que realmente destaca..."
+                            "Moonbean no es solo un lugar para tomar café, es un punto de encuentro para almas afines. Me encanta venir aquí y sumergirme en conversaciones profundas con amigos nuevos y viejos. La variedad de bebidas es impresionante..."
                         </p>
                         <button className='text-sm bg-[#C8A178] text-white  p-2 rounded-full w-24 h-8 mt-3 font-semibold flex items-center justify-center'>Leer Mas</button>
                     </div>
@@ -52,7 +52,7 @@ const BlogCard = () => {
                     <div className="px-6 py-4">
                         <div className="font-bold text-xl mb-2">Lo recomendare a mis amigos</div>
                         <p className="text-gray-700 text-base">
-                            "MoonBean es mi lugar favorito para relajarme después de un largo día. El ambiente acogedor y la deliciosa variedad de cafés hacen que siempre vuelva por más. El personal es super amable y lo mejor..."
+                            "MoonBean es mi lugar favorito para relajarme después de un largo día. El ambiente acogedor y la deliciosa variedad de cafés hacen que siempre vuelva por más. El personal es super amable y nos sentimos muy comodos con..."
                         </p>
                         <button className='text-sm bg-[#C8A178] text-white  p-2 rounded-full w-24 h-8 mt-3 font-semibold flex items-center justify-center'>Leer Mas</button>
                     </div>

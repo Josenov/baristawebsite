@@ -3,15 +3,13 @@ import React from 'react'
 const Footer = () => {
     return (
         <>
-            <footer className="">
+            <footer className="font-pro">
                 <div className=" px-4 py-16 mx-auto sm:px-6 lg:px-8 bg-[#C8A178] w-full ">
                     <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-                        <div className='flex  flex-col items-center mt-[-40px]'>
-                            <img  src="/coffeelogo.png" className="h-16" alt="logo" />
-                            <p className="max-w-xs mt-4 text-sm text-white">
-                                Visitanos en nuestras redes sociales!
-                            </p>
-                            <div className="flex mt-8 space-x-6 text-white ">
+                        <div className='flex flex-col mt-[-40px] md:mt-[0px]'>
+                            <div className='flex flex-col text-white items-center justify-center'>
+                                <img  src="/coffeelogo.png" className="h-16 w-16" alt="logo" />
+                                <div className='flex gap-3 mt-5'>
                                 <a className="hover:opacity-75" href="" target="_blank" rel="noreferrer">
                                     <span className="sr-only"> Facebook </span>
                                     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -30,7 +28,14 @@ const Footer = () => {
                                         <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
                                     </svg>
                                 </a>
+                                </div>
+                                
 
+                            </div>
+                        
+
+                            <div className="flex mt-8 space-x-6 text-white ">
+                                
 
                             </div>
                             <div className='flex flex-col text-white mt-5 justify-center'>
@@ -39,7 +44,7 @@ const Footer = () => {
                                 <button className='bg-black text-white  p-2 rounded-full w-36 h-8 mt-3 font-semibold flex items-center justify-center'>Suscribirme</button>
                             </div>
                         </div>
-                        <div className="grid grid-cols-2 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-4">
+                        <div className="grid grid-cols-2 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-4 ">
                             <div className=''>
                                 <p className="font-medium">
                                     Compañia
