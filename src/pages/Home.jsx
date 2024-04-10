@@ -7,12 +7,14 @@ import Carousel from '../components/Carousel'
 import TopCategoryCard from "../components/TopCategoryCard"
 import { AiFillStar } from "react-icons/ai"
 import HomeCarousel from "../components/HomeCarousel"
+import InfoBanner from "../components/InfoBanner"
 
 const Home = () => {
     return (
         <div className=' font-pro'>
             <Carousel />
-            <div className='flex flex-wrap md:mt-64 items-center justify-center gap-4 m-10 mt-32 md:gap-24 text-left  font-semibold'>
+            <InfoBanner/>
+            <div className='hidden md:flex flex-wrap md:mt-64 items-center justify-center gap-4 m-10 mt-32 md:gap-24 text-left  font-semibold'>
 
                 <div className="flex gap-8">
                     <div className="flex  gap-2 items-center">
