@@ -50,7 +50,7 @@ const SpecialProductCard = () => {
           specialProducts?.map((specialProduct) => {
             return (
 
-              <SwiperSlide key={specialProduct._id} className=" w-[200px] h-[350px] flex items-center justify-center rounded-lg mb-5">
+              <SwiperSlide key={specialProduct._id} className=" w-[200px] h-[450px] flex items-center justify-center rounded-lg mb-5">
                 {/* <p className='bg-[#C8A178] rounded-full text-white w-10 text-center text-sm m-2 '>-20%</p> */}
                 <div className='flex items-center justify-center flex-col rounded-lg'>
                   <img className='object-cover h-64' src={specialProduct.image} alt="" />
@@ -62,8 +62,9 @@ const SpecialProductCard = () => {
                     <AiFillStar className='h-3 text-[#C8A178]' />
                   </div>
                   <p className='text-lg'>{specialProduct.title}</p>
+                  <button className='p-3 rounded-full md:w-36 h-8 mt-3  flex items-center justify-center text-sm bg-[#C8A178] text-white'>Mas Info</button>
                   <div className='flex items-center'>
-                    <p className='text-lg font-bold'>$ {specialProduct.price}</p>
+                    <p className='text-2xl font-bold mt-2'>$ {specialProduct.price}</p>
                     {/* <del className='text-sm text-slate-500'>$6500</del> */}
                   </div>
 

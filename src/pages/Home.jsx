@@ -13,7 +13,7 @@ const Home = () => {
     return (
         <div className=' font-pro'>
             <Carousel />
-            <InfoBanner/>
+            <InfoBanner />
             <div className='hidden md:flex flex-wrap md:mt-64 items-center justify-center gap-4 m-10 mt-32 md:gap-24 text-left  font-semibold'>
 
                 <div className="flex gap-8">
@@ -82,107 +82,9 @@ const Home = () => {
 
                 <div className="md:mt-24 flex items-center  flex-col mt-[24px]">
                     <h1>Productos Top</h1>
+                    
 
-                    <div className="text-lg  md:text-lg flex flex-row  md:gap-5">
-                        <button className=' bg-[#C8A178] text-white  p-2 rounded-full md:w-36 h-8 mt-3 font-semibold flex items-center justify-center'>Clasicos</button>
-                        <button className=' text-gray-500  p-2 rounded-full md:w-36 h-8 mt-3 font-semibold flex items-center justify-center'>Nuevos</button>
-                        <button className=' text-gray-500   p-2 rounded-full md:w-36 h-8 mt-3 font-semibold flex items-center justify-center'>Mas vendidos</button>
-
-
-
-
-                    </div>
-
-
-                    <div className="hidden md:flex  items-center justify-center  rounded-lg gap-10 mb-10 mt-5">
-
-                        <div className=" w-[200px] h-[350px]  flex  flex-col rounded-lg ">
-                            <p className='bg-[#C8A178] rounded-full text-white w-10 text-center text-sm font-sans m-2 ml-10 font-pro'>-20%</p>
-                            <div className='flex items-center justify-center flex-col rounded-lg'>
-
-                                <img className='object-cover h-64' src="https://img.freepik.com/fotos-premium/vaso-cafe-irlandes-aislado-sobre-fondo-blanco_185193-52146.jpg" alt="" />
-                                <div className='flex mt-2 p-2'>
-                                    <AiFillStar className='h-3 text-[#C8A178]' />
-                                    <AiFillStar className='h-3 text-[#C8A178]' />
-                                    <AiFillStar className='h-3 text-[#C8A178]' />
-                                    <AiFillStar className='h-3 text-[#C8A178]' />
-                                    <AiFillStar className='h-3 text-[#C8A178]' />
-                                </div>
-                                <p className='text-lg'>Cafe Irlandes</p>
-                                <div className='flex items-center gap-1'>
-                                    <p className='text-lg font-bold'>$5200</p>
-                                    <del className='text-sm text-slate-500'>$6500</del>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div className=" w-[200px] h-[350px] flex  flex-col rounded-lg">
-                            <p className='bg-[#C8A178] rounded-full text-white w-10 text-center text-sm font-sans m-2 ml-10 font-pro'>-30%</p>
-                            <div className='flex items-center justify-center flex-col rounded-lg'>
-                                <img className='object-scale-down h-64' src="https://i.pinimg.com/originals/5a/d5/10/5ad510d619e6c797c4914de4a72c2859.jpg" alt="" />
-                                <div className='flex mt-2 p-2'>
-                                    <AiFillStar className='h-3 text-[#C8A178]' />
-                                    <AiFillStar className='h-3 text-[#C8A178]' />
-                                    <AiFillStar className='h-3 text-[#C8A178]' />
-                                    <AiFillStar className='h-3 text-[#C8A178]' />
-                                    <AiFillStar className='h-3 text-[#C8A178]' />
-                                </div>
-                                <p className='text-lg'>Capuccino</p>
-                                <div className='flex items-center gap-1'>
-                                    <p className='text-lg font-bold'>$3500</p>
-                                    <del className='text-sm text-slate-500'>$5000</del>
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <div className=" w-[200px] h-[350px] flex  flex-col rounded-lg">
-                            <p className='bg-[#C8A178] rounded-full text-white w-10 text-center text-sm font-sans m-2 ml-10 font-pro'>-10%</p>
-                            <div className='flex items-center justify-center flex-col rounded-lg'>
-                                <img className='object-cover h-64' src="https://americancookiesbrasil.com.br/wp-content/uploads/2022/06/mocha.png" alt="" />
-                                <div className='flex mt-2 p-2'>
-                                    <AiFillStar className='h-3 text-[#C8A178]' />
-                                    <AiFillStar className='h-3 text-[#C8A178]' />
-                                    <AiFillStar className='h-3 text-[#C8A178]' />
-                                    <AiFillStar className='h-3 text-[#C8A178]' />
-                                    <AiFillStar className='h-3 text-[#C8A178]' />
-                                </div>
-                                <p className='text-lg'>Cafe Mocha</p>
-                                <div className='flex items-center gap-1'>
-                                    <p className='text-lg font-bold'>$6750</p>
-                                    <del className='text-sm text-slate-500'>$7500</del>
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <div className=" w-[200px] h-[350px] flex  flex-col rounded-lg">
-                            <p className='bg-[#C8A178] rounded-full text-white w-10 text-center text-sm font-sans m-2 ml-10 font-pro'>-5%</p>
-                            <div className='flex items-center justify-center flex-col rounded-lg'>
-                                <img className='object-cover h-64' src="https://img.freepik.com/premium-photo/cup-coffee_957255-61.jpg" alt="" />
-                                <div className='flex mt-2 p-2'>
-                                    <AiFillStar className='h-3 text-[#C8A178]' />
-                                    <AiFillStar className='h-3 text-[#C8A178]' />
-                                    <AiFillStar className='h-3 text-[#C8A178]' />
-                                    <AiFillStar className='h-3 text-[#C8A178]' />
-                                    <AiFillStar className='h-3 text-[#C8A178]' />
-                                </div>
-                                <p className='text-lg'>Cafe Espresso</p>
-                                <div className='flex items-center gap-1'>
-                                    <p className='text-lg font-bold'>$4275</p>
-                                    <del className='text-sm text-slate-500'>$4500</del>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div >
-                        <TopProductCard />
-
-
-                    </div>
+                    <TopProductCard />
 
 
                 </div>
@@ -205,7 +107,7 @@ const Home = () => {
 
                 <div className="md:mt-16 mt-10 flex items-center flex-col">
                     <h1>Productos Especiales</h1>
-                    
+
 
                     <div className="flex flex-col md:flex-row items-center justify-center h-full mt-5 mb-5 md:gap-5">
                         <SpecialProductCard />
