@@ -125,7 +125,7 @@ const Home = () => {
 
 
 
-                    <div className="w-full" >
+                    <div className="w-full " >
                         <BlogCard />
 
 

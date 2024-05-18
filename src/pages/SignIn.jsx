@@ -1,9 +1,29 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
 import { Link as RouterLink } from 'react-router-dom'
+import { user_image } from '../store/actions/userActions'
+
+
+
 
 
 
 const SignIn = () => {
+
+    const dispatch = useDispatch();
+
+    const handleSignIn = () =>{
+
+        const userData = {
+            image: "https://josenovillo.netlify.app/assets/portfolio-pic-d01024c8.jpg"
+        }
+    
+        dispatch(user_image(userData))
+
+    }
+
+    
+
     return (
         <>
 
@@ -18,16 +38,16 @@ const SignIn = () => {
 
                 <div className="lg:p-36 md:p-52 sm:20 p-8 w-full lg:w-1/2 font-thin">
                     <h1 className="text-2xl font-semibold mb-4">Inicio de Sesión</h1>
-                    <form action="#" method="POST">
+                    <div action="#" method="POST">
 
                         <div className="mb-4">
-                            <label for="email" className="block text-gray-600">Correo Electronico</label>
-                            <input type="text" id="email" name="email" className="w-full border border-gray-400 rounded-md py-2 px-3 focus:outline-none focus:border-[#B0662E]" autocomplete="off" />
+                            <label htmlFor="email" className="block text-gray-600">Correo Electronico</label>
+                            <input type="text" id="email" name="email" className="w-full border border-gray-400 rounded-md py-2 px-3 focus:outline-none focus:border-[#B0662E]" autoComplete="off" />
                         </div>
 
                         <div className="mb-4">
-                            <label for="password" className="block text-gray-600">Contraseña</label>
-                            <input type="password" id="password" name="password" className="w-full border border-gray-400 rounded-md py-2 px-3 focus:outline-none focus:border-[#B0662E]" autocomplete="off" />
+                            <label htmlFor="password" className="block text-gray-600">Contraseña</label>
+                            <input type="password" id="password" name="password" className="w-full border border-gray-400 rounded-md py-2 px-3 focus:outline-none focus:border-[#B0662E]" autoComplete="off" />
                         </div>
 
                         
@@ -36,8 +56,8 @@ const SignIn = () => {
                             <a href="#" className="hover:underline">¿Olvidaste tu contraseña?</a>
                         </div>
 
-                        <button type="submit" className="bg-[#C8A178] hover:bg-[#B0662E] text-white font-semibold rounded-md py-2 px-4 w-full">Iniciar Sesión</button>
-                    </form>
+                        <button onClick={handleSignIn} type="submit" className="bg-[#C8A178] hover:bg-[#B0662E] text-white font-semibold rounded-md py-2 px-4 w-full">Iniciar Sesión</button>
+                    </div>
 
                     <div className="mt-6 text-[#B0662E] text-center">
                         <RouterLink to='/signup' className="hover:underline">Crear Cuenta</RouterLink>

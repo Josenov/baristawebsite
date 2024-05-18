@@ -1,11 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { AiOutlineUser, AiOutlineShoppingCart, AiOutlinePhone, AiOutlineSearch } from 'react-icons/ai'
 import Sidenav from './Sidenav'
 import { Link as RouterLink } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+
+
 
 
 
 const Header = () => {
+    
+
+    const userImage = useSelector(store => store.userReducer.image)
+    console.log(userImage)
+
+    const userImageDefault = <AiOutlineUser className='w-8 h-8 text-[#C8A178]' />
+
+    
     return (
         <>
 
@@ -27,8 +38,9 @@ const Header = () => {
                 
                 
                 
-                <div className='hidden md:flex gap-5'>
-                    <RouterLink to="/signin"> <AiOutlineUser className='w-8 h-8 text-[#C8A178]' /></RouterLink>
+                <div className='flex gap-5'>
+                    
+                    <RouterLink to="/signin"> <img className='h-10 w-10 rounded-full' src={userImage} alt="" /></RouterLink>
                     <RouterLink to="/signin"><AiOutlineShoppingCart className='w-8 h-8 text-[#C8A178]' /></RouterLink>
                     
                     

@@ -18,7 +18,7 @@ const SpecialProductCard = () => {
       .catch(err => console.log(err))
   }, [])
 
-  console.log(specialProducts)
+ // console.log(specialProducts)
 
   return (
 
@@ -29,7 +29,7 @@ const SpecialProductCard = () => {
       spaceBetween={0}
       breakpoints={{
         768:{
-            slidesPerView:4,
+            slidesPerView:5,
             centeredSlides:true,
             loop:true,
             
@@ -45,14 +45,14 @@ const SpecialProductCard = () => {
       modules={[Pagination, Navigation]}
       className="mySwiper rounded-md  w-screen text-center flex items-center justify-center    " >
 
-<div className="flex items-center justify-center text-center ">
+<div className="flex items-center justify-center text-center   ">
         {
           specialProducts?.map((specialProduct) => {
             return (
 
-              <SwiperSlide key={specialProduct._id} className=" w-[200px] h-[450px] flex items-center justify-center rounded-lg mb-5">
+              <SwiperSlide key={specialProduct._id} className="  rounded-lg mb-5">
                 {/* <p className='bg-[#C8A178] rounded-full text-white w-10 text-center text-sm m-2 '>-20%</p> */}
-                <div className='flex items-center justify-center flex-col rounded-lg'>
+                <div className='grid grid-rows-[auto, auto, auto, auto, auto]  justify-items-center h-[500px]  rounded-lg'>
                   <img className='object-cover h-64' src={specialProduct.image} alt="" />
                   <div className='flex mt-2 p-2'>
                     <AiFillStar className='h-3 text-[#C8A178]' />

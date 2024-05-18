@@ -27,7 +27,7 @@ const TopProductCard = () => {
 
 
 
-    console.log(topProducts)
+    //console.log(topProducts)
 
     const handleButtonClick = (button) => {
         setActiveButton(button);
@@ -37,7 +37,7 @@ const TopProductCard = () => {
 
     const filteredProducts = topProducts.filter((category) => category.category === categorySelected).map((category) => category.products)
 
-    console.log(filteredProducts)
+    //console.log(filteredProducts)
 
 
     
@@ -116,7 +116,7 @@ const TopProductCard = () => {
                                         </div>
                                         
                                         <div className='flex items-center gap-1'>
-                                            <p className='text-lg font-bold'>$ {product.price}</p>
+                                            <p className='text-2xl font-bold'>$ {product.price}</p>
                                             {/* <del className='text-sm text-slate-500'>$6500</del> */}
                                         </div>
 
