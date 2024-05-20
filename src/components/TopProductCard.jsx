@@ -6,22 +6,34 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper/modules";
+import { useDispatch, useSelector } from "react-redux";
+import getTopProducts from "../store/actions/topProductActions";
+
+
 
 const TopProductCard = () => {
-    const [topProducts, setTopProducts] = useState([]);
+    
 
     const [categorySelected, setCategorySelected] = useState('clasicos');
 
     const [activeButton, setActiveButton] = useState('clasicos');
 
-    const handleButtonColor = (buttonName) => {
-        
-    };
+   
+
+    const dispatch = useDispatch();
+
+    const storeTopProducts = useSelector((storeTopProducts)=>storeTopProducts.topProductReducer.topProducts)
+    console.log(storeTopProducts)
 
     useEffect(() => {
-        axios.get('http://localhost:8000/api/topProducts')
+
+        /* axios.get('http://localhost:8000/api/topProducts')
             .then(response => setTopProducts(response.data.topProductList))
-            .catch(err => console.log(err))
+            .catch(err => console.log(err)) */
+
+
+        //Redux Async
+        dispatch(getTopProducts())
 
     }, [])
 
@@ -35,7 +47,7 @@ const TopProductCard = () => {
         
     }
 
-    const filteredProducts = topProducts.filter((category) => category.category === categorySelected).map((category) => category.products)
+    const filteredProducts = storeTopProducts.filter((category) => category.category === categorySelected).map((category) => category.products)
 
     //console.log(filteredProducts)
 
