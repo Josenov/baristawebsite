@@ -1,7 +1,7 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link as RouterLink } from 'react-router-dom'
-import { user_image } from '../store/actions/userActions'
+import { user_image, user_signin } from '../store/actions/userActions'
 import { useState } from 'react'
 import axios from 'axios'
 
@@ -27,12 +27,12 @@ const SignIn = () => {
         event.preventDefault();
 
         try {
-            const {data} = await axios.post('http://localhost:8000/api/auth/signin', formData)
-            console.log(data)
-            localStorage.setItem('token', JSON.stringify(data.response.token));
+            dispatch(user_signin({
+                data: formData
+            }))
             
         } catch (error) {
-            console.log(error)
+            console.error
         }
 
         
@@ -53,6 +53,10 @@ const SignIn = () => {
     }
 
     console.log(formData)
+
+    const userData = useSelector(store=>store.userReducer)
+
+    console.log(userData)
 
     
 

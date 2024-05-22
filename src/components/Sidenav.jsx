@@ -1,12 +1,15 @@
 import React, { useState } from 'react'
-
-
 import { AiOutlineMenu, AiOutlineUser, AiOutlineShoppingCart, AiOutlineSearch } from 'react-icons/ai'
+import { useSelector } from 'react-redux';
 import { Link as RouterLink } from 'react-router-dom';
+useSelector
 
 
 const Sidenav = () => {
   const [burguerMenu, setBurguerMenu] = useState(false);
+
+  const user = useSelector(store => store.userReducer.user)
+    console.log(user)
 
 
 
@@ -24,10 +27,10 @@ const Sidenav = () => {
 
       <div  >
         <AiOutlineMenu onClick={handleBurguerMenu} className='top-10 left-6 text-xl z-[99] md:hidden text-black fixed ' />
-        <div className='flex gap-5'>
+        <div className=''>
 
-          <RouterLink to='signin'><AiOutlineUser className='top-10 right-16 text-2xl z-[99] md:hidden text-black  fixed' /></RouterLink>
-          <RouterLink to='signin'><AiOutlineShoppingCart className='top-10 right-5 text-2xl z-[99] md:hidden text-black fixed' /></RouterLink>
+          {/* <RouterLink to='signin'><AiOutlineUser className='top-10 right-16 text-2xl z-[99] md:hidden text-black  fixed' /></RouterLink>
+          <RouterLink to='signin'><AiOutlineShoppingCart className='top-10 right-5 text-2xl z-[99] md:hidden text-black fixed' /></RouterLink> */}
 
         </div>
 
@@ -56,8 +59,8 @@ const Sidenav = () => {
 
               <div className='bg-[#B0662E] mt-[-10px] h-screen w-full flex items-center justify-center flex-col'>
                 <div className='flex items-center gap-2 border border-solid border-white bg-transparent p-2 mt-[-50px]'>
-                  <AiOutlineUser className='text-lg' />
-                  <RouterLink className='' to="/signin" onClick={handleBurguerMenu}>Iniciar Sesion</RouterLink>
+                  {user?null : <AiOutlineUser className='text-lg' />}
+                  {user?<p>Bienvenido {user.name}</p>:<RouterLink className='' to="/signin" onClick={handleBurguerMenu}>Iniciar Sesion</RouterLink>}
                 </div>
                 <div className="flex mt-3 gap-4  text-white ">
                   <a className="hover:opacity-75" href="" target="_blank" rel="noreferrer">
