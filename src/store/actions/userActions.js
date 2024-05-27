@@ -34,3 +34,22 @@ export const user_signin = createAsyncThunk ('user_signin', async (obj)=>{
         
     }
 })
+
+
+export const user_token = createAction ('user_token', (user)=>{
+    return {
+        payload:{
+            user
+        }
+    }
+})
+
+export const user_signout = createAction ('reset', ()=>{
+    localStorage.removeItem('token')
+
+    return{
+        payload:{
+            payload:null
+        }
+    }
+})

@@ -7,6 +7,8 @@ import SignUp from "../pages/SignUp";
 import SpecialProducts from "../pages/SpecialProducts";
 import TopProducts from "../pages/TopProducts";
 import Main from "../layout/Main";
+import ProtectedRoutes from "./ProtectedRoutes";
+
 
 export const router = createBrowserRouter([
 
@@ -16,7 +18,11 @@ export const router = createBrowserRouter([
         children:[
             {
                 path:'/',
-                element:<Home/>
+                
+                element:
+                
+                <Home/>
+                
             },
         
             {
@@ -31,7 +37,12 @@ export const router = createBrowserRouter([
         
             {
                 path:'/signin',
-                element:<SignIn/>
+                
+                element:
+                <ProtectedRoutes>
+                <SignIn/>
+                </ProtectedRoutes>
+                
             },
         
             {

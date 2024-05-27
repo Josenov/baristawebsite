@@ -2,13 +2,22 @@ import React, { useState } from 'react'
 import { AiOutlineUser, AiOutlineShoppingCart, AiOutlinePhone, AiOutlineSearch } from 'react-icons/ai'
 import Sidenav from './Sidenav'
 import { Link as RouterLink } from 'react-router-dom'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { user_signout } from '../store/actions/userActions'
+
+
 
 
 
 
 
 const Header = () => {
+
+    const [showSignOutBtn, setShowSignOutBtn] = useState(false);
+
+    const dispatch = useDispatch()
+
+    
 
 
     const user = useSelector(store => store.userReducer.user)
@@ -49,7 +58,19 @@ const Header = () => {
 
                 <div className='flex  gap-2'>
                 
-                    <RouterLink to="/signin" className=''> {user ? <div className='flex gap-2 items-center font-pro '><p className='hidden md:flex'>{user.name}</p>  <img className='h-10 w-10 rounded-full' src={user.image} alt="" /></div> : <AiOutlineUser className='w-8 h-8 md:text-[#C8A178]' />}</RouterLink>
+                    <RouterLink to="/signin" className=''> {user ? 
+                    
+                    <div className='flex gap-2 items-center font-pro '>
+                        <div className='flex flex-col'>
+                        <p className='hidden md:flex'>{user.name}</p> 
+                            <button onClick={()=>dispatch(user_signout())} className='text-sm  rounded-full md:w-24 h-5  font-thin flex items-center justify-center ' >Cerrar Sesión</button>
+                        </div>
+                        
+                        <img onClick={()=>setShowSignOutBtn(!showSignOutBtn)} className='h-10 w-10 rounded-full' src={user.image} alt="" />
+                        
+                        
+                        </div> 
+                        : <AiOutlineUser className='w-8 h-8 md:text-[#C8A178]' />}</RouterLink>
                     <RouterLink to="/signin"><AiOutlineShoppingCart className='w-8 h-8 md:text-[#C8A178]' /></RouterLink>
                     <div className='hidden md:flex md:flex-col text-xs font-bold font-pro'>
                         <p>Compra en linea</p>

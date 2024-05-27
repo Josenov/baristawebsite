@@ -4,6 +4,8 @@ import { Link as RouterLink } from 'react-router-dom'
 import { user_image, user_signin } from '../store/actions/userActions'
 import { useState } from 'react'
 import axios from 'axios'
+import GoogleSignInButton from '../components/GoogleSignInButton'
+
 
 
 
@@ -74,6 +76,9 @@ const SignIn = () => {
 
                 <div  className="lg:p-36 md:p-52 sm:20 p-8 w-full lg:w-1/2 font-thin">
                     <h1 className="text-2xl font-semibold mb-4">Inicio de Sesión</h1>
+                    <div className='flex justify-center items-center'>
+                            <GoogleSignInButton/>
+                        </div>
                     <form onSubmit={handleSignIn} action="" method="POST">
 
                         <div className="mb-4">
