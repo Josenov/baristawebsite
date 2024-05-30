@@ -9,13 +9,13 @@ const Sidenav = () => {
   const [burguerMenu, setBurguerMenu] = useState(false);
 
   const user = useSelector(store => store.userReducer.user)
-    console.log(user)
+    /* console.log(user) */
 
 
 
   const handleBurguerMenu = () => {
     setBurguerMenu(!burguerMenu);
-    console.log("state changed")
+    /* console.log("state changed") */
   }
 
 

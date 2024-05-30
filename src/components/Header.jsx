@@ -21,7 +21,7 @@ const Header = () => {
 
 
     const user = useSelector(store => store.userReducer.user)
-    console.log(user)
+    /* console.log(user) */
 
     /* const userImageDefault =  */
 

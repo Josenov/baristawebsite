@@ -35,6 +35,17 @@ export const user_signin = createAsyncThunk ('user_signin', async (obj)=>{
     }
 })
 
+export const user_signin_google = createAsyncThunk ('user_signin_google', async (obj)=>{
+    const body = obj.data ? obj.data : obj
+
+    localStorage.setItem('token', body.token)
+    localStorage.setItem('user', JSON.stringify(body.user))
+
+    return {
+        user:body.user,
+        token:body.token
+    }
+})
 
 export const user_token = createAction ('user_token', (user)=>{
     return {

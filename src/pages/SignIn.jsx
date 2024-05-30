@@ -54,11 +54,11 @@ const SignIn = () => {
 
     }
 
-    console.log(formData)
+    /* console.log(formData) */
 
     const userData = useSelector(store=>store.userReducer)
 
-    console.log(userData)
+    /* console.log(userData) */
 
     
 
@@ -76,6 +76,7 @@ const SignIn = () => {
 
                 <div  className="lg:p-36 md:p-52 sm:20 p-8 w-full lg:w-1/2 font-thin">
                     <h1 className="text-2xl font-semibold mb-4">Inicio de Sesión</h1>
+                    
                     <div className='flex justify-center items-center'>
                             <GoogleSignInButton/>
                         </div>
