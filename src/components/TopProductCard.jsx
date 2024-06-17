@@ -81,6 +81,9 @@ const TopProductCard = () => {
 
 
                 }}
+                navigation = {{
+                    clickable:true
+                  }}
 
                 modules={[Pagination, Navigation]}
                 className="mySwiper rounded-md   text-center flex items-center justify-center flex-col w-screen  h-[490px]  "

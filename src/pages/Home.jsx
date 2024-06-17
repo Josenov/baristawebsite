@@ -5,7 +5,7 @@ import BlogCard from "../components/BlogCard"
 import BrandsCarousel from "../components/BrandsCarousel"
 import Carousel from '../components/Carousel'
 import TopCategoryCard from "../components/TopCategoryCard"
-import { AiFillStar } from "react-icons/ai"
+
 import HomeCarousel from "../components/HomeCarousel"
 import InfoBanner from "../components/InfoBanner"
 

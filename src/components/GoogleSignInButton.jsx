@@ -53,7 +53,7 @@ const GoogleSignInButton = () => {
         }
     }, [])
     return (
-        <div ref={googleButton}>Google Button</div>
+        <div ref={googleButton}></div>
     )
 }
 

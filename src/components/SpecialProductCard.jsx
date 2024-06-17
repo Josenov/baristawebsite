@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from "axios"
 
 import { AiFillStar } from "react-icons/ai"
+import { FaCartPlus } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -26,6 +27,7 @@ const SpecialProductCard = () => {
       centeredSlides={true}
       loop={true}
       slidesPerView={1}
+      
       spaceBetween={0}
       breakpoints={{
         768:{
@@ -41,6 +43,9 @@ const SpecialProductCard = () => {
         dynamicBullets: true
 
 
+      }}
+      navigation = {{
+        clickable:true
       }}
       modules={[Pagination, Navigation]}
       className="mySwiper rounded-md  w-screen text-center flex items-center justify-center    " >
@@ -65,9 +70,11 @@ const SpecialProductCard = () => {
                   <button className='p-3 rounded-full md:w-36 h-8 mt-3  flex items-center justify-center text-sm bg-[#C8A178] text-white'>Mas Info</button>
                   <div className='flex items-center'>
                     <p className='text-2xl font-bold mt-2'>$ {specialProduct.price}</p>
+                    
                     {/* <del className='text-sm text-slate-500'>$6500</del> */}
                   </div>
-
+                  <button className=' flex justify-center items-center border-2 border-[#C8A178] rounded-lg  w-16 mt-3'><FaCartPlus className='w-8 h-8 text-[#C8A178] ' /></button>
+                  
                 </div>
               </SwiperSlide>
 

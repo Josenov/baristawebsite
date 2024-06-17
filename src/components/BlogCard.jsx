@@ -40,6 +40,9 @@ const BlogCard = () => {
 
 
             }}
+            navigation = {{
+                clickable:true
+              }}
             modules={[Pagination, Navigation]}
             className="mySwiper w-96  rounded-md md:w-screen p-2 h-screen flex items-center justify-center     mt-10" >
 

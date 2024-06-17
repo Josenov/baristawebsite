@@ -10,10 +10,10 @@ const ProtectedRoutes = ( {children} ) => {
     
 
     let user = useSelector(store=>store.userReducer.user);
-    console.log(user)
+    /* console.log(user) */
 
     if(user){
-        return <Navigate to= '/'/>
+        /* return <Navigate to= '/'/> */
     }
   return (
      children

@@ -15,20 +15,24 @@ export const user_signin = createAsyncThunk ('user_signin', async (obj)=>{
     try {
 
         const {data} = await axios.post('http://localhost:8000/api/auth/signin',obj.data)
-            console.log(data)
+            console.log(data.message)
             localStorage.setItem('token', (data.response.token));
             localStorage.setItem('user', JSON.stringify(data.response.user));
 
         return {
             user:data.response.user,
-            token:data.response.token
+            token:data.response.token,
+            message:data.message,
+            
         }
         
     } catch (error) {
         console.log(error)
         return {
             
-                user:null
+                user:null,
+                message:error.response.data.message,
+                
             }
         
         

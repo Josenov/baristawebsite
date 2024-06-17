@@ -1,10 +1,12 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Link as RouterLink } from 'react-router-dom'
+import { Link as RouterLink, useNavigate } from 'react-router-dom'
 import { user_image, user_signin } from '../store/actions/userActions'
 import { useState } from 'react'
 import axios from 'axios'
 import GoogleSignInButton from '../components/GoogleSignInButton'
+import ModalPopup from '../components/ModalPopup';
+
 
 
 
@@ -17,10 +19,19 @@ const SignIn = () => {
 
     const dispatch = useDispatch();
 
+    const navigate = useNavigate()
+
+    let user = useSelector(store=>store.userReducer.user);
+
+    
+
     const [formData, setFormData] = useState({
         email: '',
         password: ''
     });
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [modalMessage, setModalMessage] = useState('');
 
     
 
@@ -29,17 +40,34 @@ const SignIn = () => {
         event.preventDefault();
 
         try {
-            dispatch(user_signin({
-                data: formData
-            }))
+            const data = await dispatch(user_signin({
+                data: formData,
+                
+            }));
+
+            console.log(data)
+            
+            setModalMessage(data.payload.message);
+
+            setIsModalOpen(true);
+            
             
         } catch (error) {
-            console.error
+            setModalMessage(error.message)
         }
 
         
 
     }
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+        if(user){
+            navigate('/')
+        }
+        
+
+      };
 
     const handleInput = (event) =>{
 
@@ -100,6 +128,8 @@ const SignIn = () => {
 
                         <button onClick={handleSignIn} type="submit" className="bg-[#C8A178] hover:bg-[#B0662E] text-white font-semibold rounded-md py-2 px-4 w-full">Iniciar Sesión</button>
                     </form>
+
+                    <ModalPopup isOpen={isModalOpen} onClose={closeModal} message={modalMessage}/>
 
                     <div className="mt-6 text-[#B0662E] text-center">
                         <RouterLink to='/signup' className="hover:underline">Crear Cuenta</RouterLink>

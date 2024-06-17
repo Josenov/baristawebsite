@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { AiOutlineMenu, AiOutlineUser, AiOutlineShoppingCart, AiOutlineSearch } from 'react-icons/ai'
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { Link as RouterLink } from 'react-router-dom';
-useSelector
+import { user_signout } from '../store/actions/userActions'
 
 
 const Sidenav = () => {
@@ -10,6 +10,8 @@ const Sidenav = () => {
 
   const user = useSelector(store => store.userReducer.user)
     /* console.log(user) */
+
+const dispatch = useDispatch();
 
 
 
@@ -60,7 +62,7 @@ const Sidenav = () => {
               <div className='bg-[#B0662E] mt-[-10px] h-screen w-full flex items-center justify-center flex-col'>
                 <div className='flex items-center gap-2 border border-solid border-white bg-transparent p-2 mt-[-50px]'>
                   {user?null : <AiOutlineUser className='text-lg' />}
-                  {user?<p>Bienvenido {user.name}</p>:<RouterLink className='' to="/signin" onClick={handleBurguerMenu}>Iniciar Sesion</RouterLink>}
+                  {user?<button onClick={()=>dispatch(user_signout())}>Cerrar Sesión</button>:<RouterLink className='' to="/signin" onClick={handleBurguerMenu}>Iniciar Sesion</RouterLink>}
                 </div>
                 <div className="flex mt-3 gap-4  text-white ">
                   <a className="hover:opacity-75" href="" target="_blank" rel="noreferrer">

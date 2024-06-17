@@ -17,6 +17,8 @@ const Header = () => {
 
     const dispatch = useDispatch()
 
+    const userImgDefault = 'https://www.svgrepo.com/show/420331/avatar-lazybones-sloth.svg'
+
     
 
 
@@ -61,12 +63,12 @@ const Header = () => {
                     <RouterLink to="/signin" className=''> {user ? 
                     
                     <div className='flex gap-2 items-center font-pro '>
-                        <div className='flex flex-col'>
-                        <p className='hidden md:flex'>{user.name}</p> 
+                        <div className='flex flex-col  items-center'>
+                        <p className='hidden md:flex '>Hola {user.name}!</p> 
                             <button onClick={()=>dispatch(user_signout())} className='text-sm  rounded-full md:w-24 h-5  font-thin flex items-center justify-center ' >Cerrar Sesión</button>
                         </div>
                         
-                        <img onClick={()=>setShowSignOutBtn(!showSignOutBtn)} className='h-10 w-10 rounded-full' src={user.image} alt="" />
+                        <img onClick={()=>setShowSignOutBtn(!showSignOutBtn)} className='h-10 w-10 rounded-full' src={user.image?user.image:userImgDefault} alt="" />
                         
                         
                         </div> 
