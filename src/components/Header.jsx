@@ -1,9 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { AiOutlineUser, AiOutlineShoppingCart, AiOutlinePhone, AiOutlineSearch } from 'react-icons/ai'
 import Sidenav from './Sidenav'
 import { Link as RouterLink } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { user_signout } from '../store/actions/userActions'
+
+import Cart from './Cart'
 
 
 
@@ -12,6 +14,8 @@ import { user_signout } from '../store/actions/userActions'
 
 
 const Header = () => {
+
+    
 
     const [showSignOutBtn, setShowSignOutBtn] = useState(false);
 
@@ -73,7 +77,7 @@ const Header = () => {
                         
                         </div> 
                         : <AiOutlineUser className='w-8 h-8 md:text-[#C8A178]' />}</RouterLink>
-                    <RouterLink to="/signin"><AiOutlineShoppingCart className='w-8 h-8 md:text-[#C8A178]' /></RouterLink>
+                    <RouterLink to="/signin">{/* <AiOutlineShoppingCart className='w-8 h-8 md:text-[#C8A178]' /> */} <Cart/> </RouterLink>
                     <div className='hidden md:flex md:flex-col text-xs font-bold font-pro'>
                         <p>Compra en linea</p>
                         <p>Envio sin cargo</p>
