@@ -1,4 +1,5 @@
 import { BiPaperPlane, BiWallet, BiHeadphone, BiGift } from "react-icons/bi"
+import { CartProvider } from "../context/CartContext"
 import TopProductCard from "../components/TopProductCard"
 import SpecialProductCard from "../components/SpecialProductCard"
 import BlogCard from "../components/BlogCard"
@@ -8,9 +9,12 @@ import TopCategoryCard from "../components/TopCategoryCard"
 
 import HomeCarousel from "../components/HomeCarousel"
 import InfoBanner from "../components/InfoBanner"
+import Products from "../Data/Products"
+
 
 const Home = () => {
     return (
+        <CartProvider>
         <div className=' font-pro'>
             <Carousel />
             <InfoBanner />
@@ -114,6 +118,11 @@ const Home = () => {
 
                     </div>
 
+                    <div className="flex flex-col md:flex-row items-center justify-center h-full mt-5 mb-5 md:gap-5">
+                        <Products />
+
+                    </div>
+
 
 
 
@@ -146,6 +155,8 @@ const Home = () => {
 
 
         </div>
+
+        </CartProvider>
     )
 }
 
