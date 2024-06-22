@@ -9,6 +9,10 @@ const Cart = () => {
     const [cartOpen, setCartOpen] = useState();
     const [productLength, setProductLength] = useState(0);
 
+    const closeModal = () => {
+        setCartOpen(false);
+    };
+
     const { cartItems } = useContext(CartContext);
 
 
@@ -28,15 +32,15 @@ const Cart = () => {
 
 
     return (
-        <div className=''>
-            <div onClick={()=>setCartOpen(!cartOpen)}>
+        <div className='font-pro flex items-center '>
+            <div onClick={() => setCartOpen(!cartOpen)}>
 
                 <div className=''>
                     {!cartOpen ? (
                         <svg
-                            className="w-8 h-8 flex items-center justify-center"
+                            className="w-8 h-8 flex items-center justify-center z-50"
                             width={"35px"}
-                            viewBox="0 -1 30 27"
+                            viewBox="0 0 30 27"
                             fill="none"
                             stroke="#C8A178"
                             strokeWidth="2.3"
@@ -69,6 +73,7 @@ const Cart = () => {
                             viewBox="0 0 20 20"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
+                            className='mb-4'
                         >
                             <path
                                 d="M0.559099 0.559099C0.917199 0.201108 1.40282 0 1.90917 0C2.41553 0 2.90115 0.201108 3.25925 0.559099L10.0115 7.31138L16.7638 0.559099C17.124 0.211254 17.6063 0.0187787 18.107 0.0231296C18.6077 0.0274804 19.0866 0.228309 19.4407 0.582361C19.7947 0.936413 19.9956 1.41536 19.9999 1.91605C20.0043 2.41673 19.8118 2.8991 19.464 3.25925L12.7117 10.0115L19.464 16.7638C19.8118 17.124 20.0043 17.6063 19.9999 18.107C19.9956 18.6077 19.7947 19.0866 19.4407 19.4407C19.0866 19.7947 18.6077 19.9956 18.107 19.9999C17.6063 20.0043 17.124 19.8118 16.7638 19.464L10.0115 12.7117L3.25925 19.464C2.8991 19.8118 2.41673 20.0043 1.91605 19.9999C1.41536 19.9956 0.936413 19.7947 0.582361 19.4407C0.228309 19.0866 0.0274804 18.6077 0.0231296 18.107C0.0187787 17.6063 0.211254 17.124 0.559099 16.7638L7.31138 10.0115L0.559099 3.25925C0.201108 2.90115 0 2.41553 0 1.90917C0 1.40282 0.201108 0.917199 0.559099 0.559099Z"
@@ -78,22 +83,37 @@ const Cart = () => {
                     )}
                 </div>
                 {!cartOpen && (
-                    <div className='h-5 w-5 top-5 right-0 bg-red-500 text-white rounded-full flex items-center justify-center font-bold font-pro text-[12px]'>{productLength}</div>
+                    <div className='h-5 w-5 mt-[-1px] right-0 bg-red-500 text-white rounded-full flex items-center justify-center font-bold font-pro text-[12px]'>{productLength}</div>
                 )}
             </div>
             {cartItems && cartOpen && (
-                <div className=' mt-[200px] mr-20 rounded-lg w-[400px] bg-[#222222] text-white'>
-                    <h2 className=' bg-red-500 text-black'>Tu Carrito</h2>
+                <div className=' z-99 fixed inset-0 ml-[860px] mt-24 '>
+                    <div className='rounded-xl w-[400px] h-auto bg-[#222222]  text-white relative'>
+                        <button className='absolute text-white hover:text-gray-300' onClick={closeModal}>
+                            <svg className="w-6 h-6" fill="#323232" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
 
-                    {cartItems.length === 0 ? <p className='text-center mt-5 text-sm'> Tu Carrito esta vacio</p> : (
-                        <div className='max-h-[200px] overflow-y-scroll mt-2'>
-                            {cartItems.map((item, i)=>(
-                                <ItemCart key={i} item = {item} />
-                            ))}
-                        </div>
-                    )}
+                        <h2 className=' bg-[#C8A178] h-auto text-xl text-white text-center flex justify-center items-center'>Tu Carrito</h2>
 
-                    <h2>Total: ${total}</h2>
+                        {cartItems.length === 0 ? <div className='flex items-center justify-center mt-5 text-sm rounded-xl text-center h-16'> Tu Carrito esta vacio</div> : (
+                            <div className='h-auto overflow-y-scroll  rounded-xl '>
+                                {cartItems.map((item, i) => (
+                                    <ItemCart key={i} item={item} />
+                                ))}
+                                <div className='flex justify-between m-2 p-2 items-center'>
+                                    <h2 className='text-center  text-2xl'>Total: ${total}</h2>
+                                    <button className='p-3 rounded-full md:w-32 h-8  flex items-center justify-center text-sm bg-[#C8A178] hover:bg-[#B0662E] text-white'>Pagar</button>
+                                </div>
+                            </div>
+
+                        )}
+
+
+
+
+                    </div>
                 </div>
             )}
         </div>
