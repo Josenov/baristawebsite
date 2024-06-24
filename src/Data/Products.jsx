@@ -22,7 +22,7 @@ const Products = () => {
                     </p>
                 </div>
 
-                <button onClick={()=>addToCart({id: product.id, name: product.name, price: product.price})} className='p-3 rounded-full md:w-36 h-8 mt-3  flex items-center justify-center text-sm bg-[#C8A178] hover:bg-[#B0662E] text-white' > Agregar al carrito</button>
+                <button onClick={()=>addToCart({id: product.id, name: product.name, image:product.image, price: product.price})} className='p-3 rounded-full md:w-36 h-8 mt-3  flex items-center justify-center text-sm bg-[#C8A178] hover:bg-[#B0662E] text-white' > Agregar al carrito</button>
             </div>
         ))}
     </div>

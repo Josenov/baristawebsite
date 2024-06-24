@@ -14,14 +14,14 @@ export const CartProvider = ({ children }) => {
         }
     })
 
-    /* useEffect(()=>{
+    useEffect(()=>{
 
         localStorage.setItem('cartProducts', JSON.stringify(cartItems))
         console.log(cartItems)
 
-    },[cartItems]) */
+    },[cartItems])
 
-    useEffect(() => {
+    /* useEffect(() => {
         try {
             const productosEnLocalStorage = localStorage.getItem('cartProducts');
             if (productosEnLocalStorage) {
@@ -41,7 +41,10 @@ export const CartProvider = ({ children }) => {
         } catch (error) {
             console.error('Error saving cart items to localStorage:', error);
         }
-    }, [cartItems]);
+    }, [cartItems]); */
+
+    
+ 
 
 
 
@@ -61,6 +64,7 @@ export const CartProvider = ({ children }) => {
             console.log('Added to cart:', { id: product.id, name: product.name, image: product.image, price: product.price, amount: inCart.amount + 1 });
         } else {
             setCartItems([...cartItems, { id: product.id, name: product.name, image: product.image, price: product.price, amount: 1 }])
+            
         }
 
 
@@ -82,12 +86,14 @@ export const CartProvider = ({ children }) => {
         } else {
             setCartItems(
                 cartItems.map((productInCart) => {
-                if (productInCart.id === product.id) {
-                    return { ...inCart, amount: inCart.amount - 1 }
-                } else return productInCart;
-            }))
+                    if (productInCart.id === product.id) {
+                        return { ...inCart, amount: inCart.amount - 1 }
+                    } else return productInCart;
+                }))
         }
     };
+
+    console.log(cartItems)
 
     return (
         <CartContext.Provider value={{ cartItems, addToCart, deleteItemToCart }}>

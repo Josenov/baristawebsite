@@ -8,7 +8,6 @@ import { user_signout } from '../store/actions/userActions'
 
 import Cart from './Cart'
 
-CartProvider
 
 
 
@@ -20,7 +19,8 @@ CartProvider
 
 
 
-const Header = () => {
+
+const Header = ({productLength}) => {
 
     
 
@@ -84,7 +84,7 @@ const Header = () => {
                         
                         </div> 
                         : <AiOutlineUser className='w-8 h-8 md:text-[#C8A178]' />}</RouterLink>
-                    <div className='flex items-center mt-5'> {/* <AiOutlineShoppingCart className='w-8 h-8 md:text-[#C8A178]' /> */} <Cart/> </div>
+                    <div className='flex items-center mt-5'> {/* <AiOutlineShoppingCart className='w-8 h-8 md:text-[#C8A178]' /> */} <Cart productLength={productLength}/> </div>
                     <div className='hidden md:flex md:flex-col text-xs font-bold font-pro'>
                         <p>Compra en linea</p>
                         <p>Envio sin cargo</p>

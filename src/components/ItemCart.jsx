@@ -3,10 +3,10 @@ import CartContext from '../context/CartContext'
 
 const ItemCart = ({ item }) => {
     const { addToCart, deleteItemToCart } = useContext(CartContext)
-    /* const { id } = item; */
+    const { id } = item;
     return (
         <div className='h-[150px] bg-[#fafafa] flex m-4 items-center justify-center gap-8 text-black rounded-lg'>
-            <img className='h-32 w-32' src={item.image} alt="" />
+            <img className='h-32 w-32 object-contain' src={item.image} alt={item.name} />
 
             <div>
                 <div className='flex flex-col'>

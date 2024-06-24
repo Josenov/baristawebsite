@@ -10,8 +10,8 @@ import ScrollToTopButton from "../components/ScrollToTopButton.jsx"
 const Main = () => {
   return (
     <div className="overflow-hidden  ">
-      <ScrollToTopButton/>
       <ScrollToTop/>
+      <ScrollToTopButton/>
       <Header />
       <Outlet />
       <Footer />
