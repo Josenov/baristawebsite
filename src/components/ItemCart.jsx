@@ -2,15 +2,15 @@ import React, { useContext } from 'react'
 import CartContext from '../context/CartContext'
 
 const ItemCart = ({ item }) => {
-    const { addToCart, deleteItemToCart } = useContext(CartContext)
-    const { id } = item;
+    const { editItemToCart } = useContext(CartContext)
+    const { amount } = item;
     return (
-        <div className='h-[150px] bg-[#fafafa] flex m-4 items-center justify-center gap-8 text-black rounded-lg'>
-            <img className='h-32 w-32 object-contain' src={item.image} alt={item.name} />
+        <div className='md:max-h-[200px] m-5 p-2  bg-[#fafafa] flex md:m-4 items-center justify-center md:gap-8 text-black rounded-lg'>
+            <img className='h-32 w-32 object-contain' src={item.image} alt={item.title} />
 
             <div>
                 <div className='flex flex-col'>
-                    <p>{item.name}</p>
+                    <p>{item.title}</p>
                     <div className='flex'>
                     <p className='text-sm mr-2'>Precio: ${item.price}</p>
                     <p className='text-sm'>Cantidad:</p>
@@ -21,8 +21,8 @@ const ItemCart = ({ item }) => {
                     </div>
                     
                     <div className='flex gap-2 items-center justify-center'>
-                        <button onClick={() => addToCart(item)} className='p-3 rounded-full md:w-16 h-1 mt-3  flex items-center justify-center text-sm bg-[#C8A178] hover:bg-[#B0662E] text-white' >Agregar</button>
-                        <button onClick={() => deleteItemToCart(item)} className='p-3 rounded-full md:w-16 h-1 mt-3  flex items-center justify-center text-sm bg-[#C8A178] hover:bg-[#B0662E] text-white'>Sacar</button>
+                        <button onClick={() => editItemToCart(item._id, "add", amount)} className='p-3 w-[100px] rounded-full md:w-16 h-1 mt-3  flex items-center justify-center text-sm bg-[#C8A178] hover:bg-[#B0662E] text-white' >Agregar</button>
+                        <button onClick={() => editItemToCart(item._id, "del", amount)} className='p-3 w-[100px] rounded-full md:w-16 h-1 mt-3  flex items-center justify-center text-sm bg-[#C8A178] hover:bg-[#B0662E] text-white'>Sacar</button>
                     </div>
                 </div>
                 <div className='mt-4 text-center'>

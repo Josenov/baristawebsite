@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import axios from "axios"
-
+import CartContext from '../context/CartContext';
 import { AiFillStar } from "react-icons/ai"
 import { FaCartPlus } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -9,7 +9,10 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper/modules";
 
+
 const SpecialProductCard = () => {
+
+  const {addToCart, cartSpecialProducts} = useContext(CartContext);
 
   const [specialProducts, setSpecialProducts] = useState();
 
@@ -18,6 +21,8 @@ const SpecialProductCard = () => {
       .then(response => setSpecialProducts(response.data.specialProductsList))
       .catch(err => console.log(err))
   }, [])
+
+  
 
  // console.log(specialProducts)
 
@@ -73,7 +78,7 @@ const SpecialProductCard = () => {
                     
                     {/* <del className='text-sm text-slate-500'>$6500</del> */}
                   </div>
-                  <button className=' flex justify-center items-center border-2 border-[#C8A178] rounded-lg  w-16 mt-3'><FaCartPlus className='w-8 h-8 text-[#C8A178] ' /></button>
+                  <button onClick={()=>addToCart(specialProduct)} className=' flex justify-center items-center border-2 border-[#C8A178] rounded-lg  w-16 mt-3'><FaCartPlus className='w-8 h-8 text-[#C8A178] ' /></button>
                   
                 </div>
               </SwiperSlide>
