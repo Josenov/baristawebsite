@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
-import CartContext from '../context/CartContext';
+import { useDispatch, useSelector } from 'react-redux'
+import {getCartProducts } from '../store/actions/cartActions'
 import ItemCart from './ItemCart';
 
 
@@ -7,28 +8,64 @@ import ItemCart from './ItemCart';
 
 const Cart = () => {
     const [cartOpen, setCartOpen] = useState();
-    const [productLength, setProductLength] = useState(0);
+
+    const [total, setTotal] = useState(0);
+    
+    const dispatch = useDispatch()
 
     const closeModal = () => {
         setCartOpen(false);
     };
 
-    const { cartItems } = useContext(CartContext);
+    const  cartItems  = useSelector(cartItems => cartItems.cartReducer.cartProducts);
+
+   
+
+   
+    
+    console.log('Total:', total);
+
+    console.log('Cart Items:', cartItems)
+
+    
+
+    
+
+    useEffect(() => {
+        dispatch(getCartProducts());
+    }, [dispatch])
+
+    
 
 
     useEffect(() => {
-        setProductLength(
-            cartItems.reduce((previous, current) => previous + current.amount, 0)
-        )
+        if (cartItems.length > 0) {
+            const newTotal = cartItems.reduce((previous, current) => previous + current.amount * current.price, 0);
+            setTotal(newTotal);
+        } else {
+            setTotal(0)
+        }
     }, [cartItems]);
 
-    console.log(cartItems)
+    
+    
 
-    const total = cartItems.reduce(
-        (previous, current) => previous + current.amount * current.price, 0
-    )
+    
 
-    console.log(total)
+
+    
+
+    
+
+    
+
+
+    
+
+    
+
+   
+
 
 
     return (
@@ -85,7 +122,7 @@ const Cart = () => {
                     )}
                 </div>
                 {!cartOpen && (
-                    <div className='h-5 w-5 mt-[-1px] right-0 bg-red-500 text-white rounded-full flex items-center justify-center font-bold font-pro text-[12px]'>{productLength}</div>
+                    <div className='h-5 w-5 mt-[-1px] right-0 bg-red-500 text-white rounded-full flex items-center justify-center font-bold font-pro text-[12px]'>{cartItems.length}</div>
                 )}
             </div>
             
@@ -105,13 +142,13 @@ const Cart = () => {
 
                         
 
-                        {cartItems.length === 0 ? <div className='flex items-center justify-center mt-5 text-sm rounded-xl text-center h-16'> Tu Carrito esta vacio</div> : (
+                        { cartItems.length <= 0 ? <div className='flex items-center justify-center mt-5 text-sm rounded-xl text-center h-16'> Tu Carrito esta vacio</div> : (
                             <div className='h-auto '>
-                                {cartItems.map((item, i) => (
-                                    <ItemCart key={i} item={item} />
+                                {cartItems?.map((item) => (
+                                    <ItemCart key={item._id} item={item}  />
                                 ))}
                                 <div className='flex justify-between m-2 p-2 items-center '>
-                                    <h2 className='text-center  text-2xl'>Total: ${total}</h2>
+                                    <h2 className='text-center  text-2xl'>Total: ${total.toFixed(2)}</h2>
                                     <button className='p-3 w-64 rounded-full md:w-32 h-[48px]  flex items-center justify-center text-sm bg-[#C8A178] hover:bg-[#B0662E] text-white'>Pagar</button>
                                 </div>
                             </div>
@@ -134,3 +171,6 @@ const Cart = () => {
 }
 
 export default Cart
+
+
+

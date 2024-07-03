@@ -1,18 +1,11 @@
-import { createContext, useEffect, useState } from "react";
+/* import { createContext, useEffect, useState } from "react";
 import axios from "axios";
 
 const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
 
-    /* const [cartItems, setCartItems] = useState(() => {
-        try {
-            const productosEnLocalStorage = localStorage.getItem('cartProducts')
-            return productosEnLocalStorage ? JSON.parse(productosEnLocalStorage) : [];
-        } catch (error) {
-            return [];
-        }
-    }) */
+    
 
         const [cartItems, setCartItems] = useState([])
 
@@ -38,12 +31,7 @@ export const CartProvider = ({ children }) => {
 
         
 
-    /* useEffect(()=>{
-
-        localStorage.setItem('cartProducts', JSON.stringify(cartItems))
-        console.log(cartItems)
-
-    },[cartItems]) */
+    
 
     useEffect(()=>{
         getSpecialProducts();
@@ -53,53 +41,14 @@ export const CartProvider = ({ children }) => {
 
     console.log(cartItems)
 
-    /* useEffect(() => {
-        try {
-            const productosEnLocalStorage = localStorage.getItem('cartProducts');
-            if (productosEnLocalStorage) {
-                const loadedCartItems = JSON.parse(productosEnLocalStorage);
-                setCartItems(loadedCartItems);
-                console.log('Cart items loaded from localStorage:', loadedCartItems);
-            }
-        } catch (error) {
-            console.error('Error loading cart items from localStorage:', error);
-        }
-    }, []);
-
-    useEffect(() => {
-        try {
-            localStorage.setItem('cartProducts', JSON.stringify(cartItems));
-            console.log('productos guardados en local storage ', cartItems)
-        } catch (error) {
-            console.error('Error saving cart items to localStorage:', error);
-        }
-    }, [cartItems]); */
+    
 
     
  
 
 
 
-    /* const addToCart = (product) => {
-        const inCart = cartItems.find(
-            (productInCart) => productInCart.id === product.id
-        );
-
-        if (inCart) {
-            setCartItems(
-                cartItems.map((productInCart) => {
-                    if (productInCart.id === product.id) {
-                        return { ...inCart, amount: inCart.amount + 1 }
-                    } else return productInCart
-                })
-            );
-            console.log('Added to cart:', { id: product.id, name: product.name, image: product.image, price: product.price, amount: inCart.amount + 1 });
-        } else {
-            setCartItems([...cartItems, { id: product.id, name: product.name, image: product.image, price: product.price, amount: 1 }])
-            
-        }
-
-    }; */
+    
 
     const addToCart = async (product) => {
 
@@ -113,26 +62,7 @@ export const CartProvider = ({ children }) => {
 
        
 
-    /* const deleteItemToCart = (product) => {
-        const inCart = cartItems.find(
-            (productInCart) => productInCart.id === product.id
-        );
-
-        if (inCart.amount === 1) {
-            setCartItems(
-                cartItems.filter((productInCart) => productInCart.id !== product.id)
-            );
-        } else {
-            setCartItems(
-                cartItems.map((productInCart) => {
-                    if (productInCart.id === product.id) {
-                        return { ...inCart, amount: inCart.amount - 1 }
-                    } else return productInCart;
-                }))
-        }
-    };
-
-    console.log(cartItems) */
+    
 
     const editItemToCart = async (id, query, amount) => {
         if (query === "del" && amount === 1){
@@ -173,3 +103,4 @@ export default CartContext
 
 
 
+ */

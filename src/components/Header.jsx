@@ -1,10 +1,11 @@
 import React, { useState, useContext } from 'react'
-import CartContext, { CartProvider } from '../context/CartContext'
+/* import CartContext, { CartProvider } from '../context/CartContext' */
 import { AiOutlineUser, AiOutlineShoppingCart, AiOutlinePhone, AiOutlineSearch } from 'react-icons/ai'
 import Sidenav from './Sidenav'
 import { Link as RouterLink } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { user_signout } from '../store/actions/userActions'
+import { addToCart } from '../store/actions/cartActions'
 
 import Cart from './Cart'
 
@@ -34,13 +35,14 @@ const Header = ({productLength}) => {
 
 
     const user = useSelector(store => store.userReducer.user)
+    
     /* console.log(user) */
 
     /* const userImageDefault =  */
 
 
     return (
-        <CartProvider>
+        <>
 
             
 
@@ -115,7 +117,7 @@ const Header = ({productLength}) => {
 
             <Sidenav className="md:hidden" />
 
-        </CartProvider>
+        </>
     )
 }
 

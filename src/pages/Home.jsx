@@ -1,5 +1,5 @@
 import { BiPaperPlane, BiWallet, BiHeadphone, BiGift } from "react-icons/bi"
-import { CartProvider } from "../context/CartContext"
+/* import { CartProvider } from "../context/CartContext" */
 import TopProductCard from "../components/TopProductCard"
 import SpecialProductCard from "../components/SpecialProductCard"
 import BlogCard from "../components/BlogCard"
@@ -14,7 +14,7 @@ import InfoBanner from "../components/InfoBanner"
 
 const Home = () => {
     return (
-        <CartProvider>
+        <>
         <div className=' font-pro'>
             <Carousel />
             <InfoBanner />
@@ -153,7 +153,7 @@ const Home = () => {
 
         </div>
 
-        </CartProvider>
+        </>
     )
 }
 

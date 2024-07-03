@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import axios from "axios"
-import CartContext from '../context/CartContext';
+/* import CartContext from '../context/CartContext'; */
 import { AiFillStar } from "react-icons/ai"
 import { FaCartPlus } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -8,11 +8,16 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper/modules";
+import { addToCart, editItemToCart } from '../store/actions/cartActions'
 
+import { useDispatch, useSelector } from 'react-redux'
 
 const SpecialProductCard = () => {
 
-  const {addToCart, cartSpecialProducts} = useContext(CartContext);
+  const dispatch = useDispatch();
+  const cart = useSelector(store => store.cartReducer.cartSpecialProducts)
+
+  
 
   const [specialProducts, setSpecialProducts] = useState();
 
@@ -78,7 +83,7 @@ const SpecialProductCard = () => {
                     
                     {/* <del className='text-sm text-slate-500'>$6500</del> */}
                   </div>
-                  <button onClick={()=>addToCart(specialProduct)} className=' flex justify-center items-center border-2 border-[#C8A178] rounded-lg  w-16 mt-3'><FaCartPlus className='w-8 h-8 text-[#C8A178] ' /></button>
+                  <button onClick={()=>dispatch(addToCart(specialProduct))} className=' flex justify-center items-center border-2 border-[#C8A178] rounded-lg  w-16 mt-3'><FaCartPlus className='w-8 h-8 text-[#C8A178] ' /></button>
                   
                 </div>
               </SwiperSlide>
