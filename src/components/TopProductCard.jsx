@@ -23,7 +23,7 @@ const TopProductCard = () => {
     const dispatch = useDispatch();
 
     const storeTopProducts = useSelector((storeTopProducts)=>storeTopProducts.topProductReducer.topProducts)
-    console.log(storeTopProducts)
+    /* console.log(storeTopProducts) */
 
     useEffect(() => {
 

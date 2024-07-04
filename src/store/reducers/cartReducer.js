@@ -44,20 +44,21 @@ const cartReducer = createReducer(initialState,
         .addCase(editItemToCart.fulfilled, (state, action) => {
             state.status = 'succeeded';
             const { id, query, amount } = action.payload;
-            const updatedItemIndex = state.cartProducts.findIndex(item => item.id === id);
+            const updatedItemIndex = state.cartProducts.findIndex(item => item._id === id);
             if (updatedItemIndex !== -1) {
                 if (query === "add") {
                     state.cartProducts[updatedItemIndex].amount += amount;
                     
                 } else  if(query === "del") {
-                    state.cartProducts[updatedItemIndex].amount -= amount;
+                    state.cartProducts[updatedItemIndex].amount -= 1;
                     // If amount goes to zero, remove the item from cart
                     if (state.cartProducts[updatedItemIndex].amount <= 0) {
-                        state.cartProducts.splice(updatedItemIndex, 1);
+                        state.cartProducts[updatedItemIndex].amount = 0 
+                        /* state.cartProducts.splice(updatedItemIndex, 1)  */
                     }
                 }
             } else {
-                console.log('Producto editado con exito', 'Id Producto:', id)
+                console.log('Producto no encontrado en el carrito:', id);
             }
         })
         .addCase(editItemToCart.rejected, (state, action) => {

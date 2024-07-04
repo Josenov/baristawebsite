@@ -21,7 +21,7 @@ import Cart from './Cart'
 
 
 
-const Header = ({productLength}) => {
+const Header = () => {
 
     
 
@@ -59,7 +59,7 @@ const Header = ({productLength}) => {
 
                 </div>
 
-                <div className='flex ml-32 md:ml-0'>
+                <div className='ml-[160px] md:ml-0'>
                 <RouterLink to='/'>
                     <img src="/coffeelogo.png" className='w-16 h-16 md:w-20 md:h-20' alt="" />
                 </RouterLink>
@@ -86,7 +86,7 @@ const Header = ({productLength}) => {
                         
                         </div> 
                         : <AiOutlineUser className='w-8 h-8 text-[#C8A178]' />}</RouterLink>
-                    <div className='flex items-center mt-5'> {/* <AiOutlineShoppingCart className='w-8 h-8 md:text-[#C8A178]' /> */} <Cart productLength={productLength}/> </div>
+                    <div className='flex items-center mt-5'> {/* <AiOutlineShoppingCart className='w-8 h-8 md:text-[#C8A178]' /> */} <Cart /> </div>
                     <div className='hidden md:flex md:flex-col text-xs font-bold font-pro'>
                         <p>Compra en linea</p>
                         <p>Envio sin cargo</p>

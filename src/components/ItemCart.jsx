@@ -33,7 +33,9 @@ const ItemCart = ({ item }) => {
     
 
     
-    
+    if (localAmount <= 0) {
+        return null;
+    }
 
     
 
@@ -46,11 +48,13 @@ const ItemCart = ({ item }) => {
 
 
     return (
-        <div className='md:max-h-[200px] m-5 p-2  bg-[#fafafa] flex md:m-4 items-center justify-center md:gap-8 text-black rounded-lg'>
-            <img className='h-32 w-32 object-contain' src={item.image} alt={item.title} />
+        <div className='md:max-h-[200px] m-5 p-2  bg-[#fafafa] flex md:m-4  items-center justify-center md:gap-8 text-black rounded-lg'>
+            <div className=''>
+            <img className='h-32 w-32 object-contain ' src={item.image} alt={item.title} />
+            </div>
 
             <div>
-                <div className='flex flex-col'>
+                <div className='flex flex-col w-48'>
                     <p className='mb-2'>{item.title}</p>
                     <div className='flex'>
                         <p className='text-sm mr-2'>Precio: ${item.price}</p>
