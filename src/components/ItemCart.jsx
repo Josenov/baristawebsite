@@ -8,37 +8,70 @@ import { getCartProducts } from '../store/actions/cartActions'
 const ItemCart = ({ item }) => {
 
     const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(getCartProducts());
+
+    }, [dispatch])
+
+    
+
+    
     
 
     const [localAmount, setLocalAmount] = useState(item.amount);
 
+    
+
     const {amount} = item
-
-    const handleEditItem = (id, query) => {
-        if (query === "add") {
-            setLocalAmount(prevAmount => prevAmount + 1);
-        } else if (query === "del" && localAmount > 0) {
-            setLocalAmount(prevAmount => prevAmount - 1);
-        }
-        dispatch(editItemToCart({ id, query, amount }));
-    };
-
-    useEffect(() => {
-        dispatch(getCartProducts());
-    }, [dispatch]);
 
     useEffect(() => {
         setLocalAmount(item.amount);
+        
     }, [item.amount]);
-    
 
     
+
+    const handleEditItem =  (id, query) => {
+        if (query === "add") {
+            setLocalAmount(prevAmount => prevAmount + 1);
+            
+        } else if (query === "del" && localAmount > 0) {
+            setLocalAmount(prevAmount => prevAmount - 1);
+            
+            
+            
+        } 
+       
+        
+        dispatch(editItemToCart({ id, query, amount }));
+       
+
+        
+
+        
+        
+        
+    };
+
+
     if (localAmount <= 0) {
-        return null;
+        return null ;
     }
 
     
 
+    console.log(localAmount)
+
+
+    
+    
+
+    
+    
+
+    
+    
     
 
     
@@ -54,7 +87,7 @@ const ItemCart = ({ item }) => {
             </div>
 
             <div>
-                <div className='flex flex-col w-48'>
+                <div className='flex flex-col w-54'>
                     <p className='mb-2'>{item.title}</p>
                     <div className='flex'>
                         <p className='text-sm mr-2'>Precio: ${item.price}</p>
@@ -66,8 +99,8 @@ const ItemCart = ({ item }) => {
                     </div>
 
                     <div className='flex gap-2 items-center justify-center'>
-                        <button onClick={() => handleEditItem(item._id, "add", amount)} className='p-3 w-[90px] rounded-full md:w-16 h-1 mt-3  flex items-center justify-center text-sm bg-[#C8A178] hover:bg-[#B0662E] text-white' >Agregar</button>
-                        <button onClick={() => handleEditItem(item._id, "del", amount )} className='p-3 w-[90px] rounded-full md:w-16 h-1 mt-3  flex items-center justify-center text-sm bg-[#C8A178] hover:bg-[#B0662E] text-white'>Sacar</button>
+                        <button onClick={() => handleEditItem(item._id, "add")} className='p-3 w-[90px] rounded-full md:w-16 h-1 mt-3  flex items-center justify-center text-sm bg-[#C8A178] hover:bg-[#B0662E] text-white' >Agregar</button>
+                        <button onClick={() => handleEditItem(item._id, "del")} className='p-3 w-[90px] rounded-full md:w-16 h-1 mt-3  flex items-center justify-center text-sm bg-[#C8A178] hover:bg-[#B0662E] text-white'>Sacar</button>
                     </div>
                 </div>
                 <div className='mt-4 text-center'>

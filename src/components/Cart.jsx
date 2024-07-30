@@ -1,80 +1,96 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import {getCartProducts } from '../store/actions/cartActions'
+import { getCartProducts } from '../store/actions/cartActions'
 import ItemCart from './ItemCart';
 
 
 
 
 const Cart = () => {
+
+    const dispatch = useDispatch()
+
+    const cartItems = useSelector(state => state.cartReducer.cartProducts);
+
+    useEffect(() => {
+        dispatch(getCartProducts());
+
+    }, [dispatch])
+
     const [cartOpen, setCartOpen] = useState();
 
     const [total, setTotal] = useState(0);
+
     
-    const dispatch = useDispatch()
 
-    const closeModal = () => {
-        setCartOpen(false);
-    };
-
-    const  cartItems  = useSelector(cartItems => cartItems.cartReducer.cartProducts);
-
-   
-
-   
     
+    
+
+    
+
+    
+
+    console.log(cartItems)
+
+    
+
+
+
+    useEffect(() => {
+
+        if (cartItems.length > 0) {
+            const newTotal = cartItems.reduce((previous, current) => previous + current.amount * current.price, 0);
+            
+            setTotal(newTotal);
+            
+            
+            
+    
+    
+        }
+       
+         else {
+    
+            
+    
+            setTotal(0)
+            
+        }
+        
+        
+        
+
+    }, [cartItems]);
+
+
+
+
+
+
+
     console.log('Total:', total);
 
     console.log('Cart Items:', cartItems)
 
     
-
-    
-
-    
-    useEffect(() => {
-        dispatch(getCartProducts());
-    }, [dispatch])
-    
-
-
-    useEffect(() => {
-        if (cartItems.length > 0) {
-            const newTotal = cartItems.reduce((previous, current) => previous + current.amount * current.price, 0);
-            setTotal(newTotal);
-        } else {
-            setTotal(0)
-        }
-    }, [cartItems]);
-
-
-    
-
-    
-    
-
     
 
 
     
 
-    
+    const closeModal = () => {
+        setCartOpen(false);
+        dispatch(getCartProducts())
+        
+    };
 
     
-
-
     
-
-    
-
-   
-
-
 
     return (
-        
+
         <div className='font-pro flex items-center '>
-            
+
             <div onClick={() => setCartOpen(!cartOpen)}>
 
                 <div className=''>
@@ -128,48 +144,54 @@ const Cart = () => {
                     <div className='h-5 w-5 mt-[-1px] right-0 bg-red-500 text-white rounded-full flex items-center justify-center font-bold font-pro text-[12px]'>{cartItems.length}</div>
                 )}
             </div>
-            
+
             <div>
-            {cartItems && cartOpen && (
-                <div className=' fixed z-[99] w-screen h-screen inset-0  md:left-[750px] md:top-[95px] rounded-lg md:w-[500px] md:h-auto overflow-y-scroll o  ' >
-                    <div className='  bg-[#222222]   text-white'>
-                        <div>
-                        <h2 className=' bg-[#C8A178] h-16 text-xl text-white text-center flex justify-center items-center shadow-lg'>Tu Carrito</h2>
-                        <button className='absolute top-2 left-2 text-white hover:text-gray-300 ' onClick={closeModal}>
-                            <svg className="w-6 h-6" fill="#323232" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                        </button>
-                        </div>
-                    
-
-                        
-
-                        { cartItems && cartItems.length === 0 ? <div className='flex items-center justify-center mt-5 text-sm rounded-xl text-center h-16'> Tu Carrito esta vacio</div> : (
-                            <div className='h-auto '>
-                                {cartItems?.map((item) => (
-                                    <ItemCart key={item._id} item={item}  />
-                                ))}
-
-                                <div className='flex justify-between m-2 p-2 items-center '>
-                                    <h2 className='text-center  text-2xl'>Total: ${total.toFixed(2)}</h2>
-                                    <button className='p-3 w-64 rounded-full md:w-64 h-[48px]  flex items-center justify-center text-sm bg-[#C8A178] hover:bg-[#B0662E] text-white'>Pagar</button>
-                                </div> 
-                                
+                { cartOpen && (
+                    <div className=' fixed z-[100] w-screen h-screen inset-0  md:left-[750px] md:top-[95px] rounded-lg md:w-[500px] md:h-auto overflow-y-scroll o  ' >
+                        <div className='  bg-[#222222]   text-white'>
+                            <div>
+                                <h2 className=' bg-[#C8A178] h-16 text-xl text-white text-center flex justify-center items-center shadow-lg'>Tu Carrito</h2>
+                                <button className='absolute top-2 left-2 text-white hover:text-gray-300 ' onClick={closeModal}>
+                                    <svg className="w-6 h-6" fill="#323232" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </button>
                             </div>
 
-                        )}
 
 
 
+
+
+                            {cartItems.length === 0 ? <div className='flex items-center justify-center mt-5 text-sm rounded-xl text-center h-16'> Tu Carrito esta vacio</div>
+                                : (
+                                    <div className='h-auto '>
+                                        {cartItems?.map((item) => (
+                                            <ItemCart key={item._id} item={item} />
+
+                                        ))}
+
+                                        <div className='flex justify-between m-2 p-2 items-center '>
+                                            <h2 className='text-center  text-2xl'>Total: ${total}</h2>
+                                            <button className='p-3 w-64 rounded-full md:w-64 h-[48px]  flex items-center justify-center text-sm bg-[#C8A178] hover:bg-[#B0662E] text-white'>Pagar</button>
+                                        </div>
+
+
+
+                                    </div>
+
+                                )}
+
+
+
+
+                        </div>
 
                     </div>
-                    
-                </div>
-                
-            )}
+
+                )}
             </div>
-            
+
         </div>
 
     )

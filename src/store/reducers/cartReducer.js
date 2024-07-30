@@ -3,7 +3,8 @@ import { addToCart, editItemToCart, getCartProducts } from "../actions/cartActio
 
 const initialState = {
 
-    cartProducts: []
+    cartProducts: [], 
+    
 
 }
 
@@ -39,7 +40,9 @@ const cartReducer = createReducer(initialState,
             state.error = action.error.message;
         })
 
-        
+        .addCase(editItemToCart.pending, (state) => {
+            state.status = 'loading';
+        })
 
         .addCase(editItemToCart.fulfilled, (state, action) => {
             state.status = 'succeeded';
@@ -47,31 +50,48 @@ const cartReducer = createReducer(initialState,
             const updatedItemIndex = state.cartProducts.findIndex(item => item._id === id);
             if (updatedItemIndex !== -1) {
                 if (query === "add") {
-                    state.cartProducts[updatedItemIndex].amount += amount;
-                    
-                } else  if(query === "del") {
+                    state.cartProducts[updatedItemIndex].amount += 1;
+        
+                } else if (query === "del") {
                     state.cartProducts[updatedItemIndex].amount -= 1;
-                    // If amount goes to zero, remove the item from cart
+                    
                     if (state.cartProducts[updatedItemIndex].amount <= 0) {
-                        state.cartProducts[updatedItemIndex].amount = 0 
-                        /* state.cartProducts.splice(updatedItemIndex, 1)  */
-                    }
+                        state.cartProducts.splice(updatedItemIndex, 1);}
+                    // If amount goes to zero, remove the item from cart
+                    /* if (state.cartProducts[updatedItemIndex].amount <= 0) {
+                        state.cartProducts[updatedItemIndex].amount = 0
+                        
+                        
+                    }  */
+
+                       
+            
                 }
+
+                
+        
+                
             } else {
                 console.log('Producto no encontrado en el carrito:', id);
             }
+
+            
         })
         .addCase(editItemToCart.rejected, (state, action) => {
             state.status = 'failed';
             state.error = action.error.message;
         })
-
         
+
+
+
 
 
 );
 
 export default cartReducer;
+
+
 
 
 

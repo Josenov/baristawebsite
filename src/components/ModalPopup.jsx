@@ -7,7 +7,7 @@ useSelector
 
 
 
-const ModalPopup = ({ isOpen, onClose, message }) => {
+const ModalPopup = ({title,  isOpen, onClose, message }) => {
 
     let user = useSelector(store=>store.userReducer.user);
     const okImg = 'https://cdn-icons-png.flaticon.com/512/7595/7595571.png'
@@ -36,7 +36,7 @@ const ModalPopup = ({ isOpen, onClose, message }) => {
                             to="/signin"
                             className="bg-[#C8A178] hover:bg-[#B0662E] text-white font-bold py-2 px-4 rounded mt-4"
                         >
-                            Iniciar sesión
+                            {title}
                         </Link>: null
                         }
                         

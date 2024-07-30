@@ -25,12 +25,12 @@ const dispatch = useDispatch();
 
   return (
     <>
-
+        <AiOutlineMenu onClick={handleBurguerMenu} className='top-10 left-6 text-xl bg-color-red-800 z-[99] md:hidden text-black fixed ' />
 
       <div  >
-        <AiOutlineMenu onClick={handleBurguerMenu} className='top-10 left-6 text-xl z-[50] md:hidden text-black fixed ' />
+        
         <div className=''>
-
+            
           {/* <RouterLink to='signin'><AiOutlineUser className='top-10 right-16 text-2xl z-[99] md:hidden text-black  fixed' /></RouterLink>
           <RouterLink to='signin'><AiOutlineShoppingCart className='top-10 right-5 text-2xl z-[99] md:hidden text-black fixed' /></RouterLink> */}
 
@@ -59,7 +59,7 @@ const dispatch = useDispatch();
 
 
 
-              <div className='bg-[#B0662E] mt-[-10px] h-screen w-full flex items-center justify-center flex-col'>
+              <div className='bg-[#B0662E]  h-full w-full flex items-center justify-center flex-col'>
                 <div className='flex items-center gap-2 border border-solid border-white bg-transparent p-2 mt-[-50px]'>
                   {user?null : <AiOutlineUser className='text-lg ' />}
                   {user?<button onClick={()=>dispatch(user_signout())}>Cerrar Sesión</button>:<RouterLink className='' to="/signin" onClick={handleBurguerMenu}>Iniciar Sesion</RouterLink>}

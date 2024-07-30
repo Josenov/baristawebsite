@@ -4,6 +4,7 @@ import { useEffect } from "react"
 import axios from "axios"
 import { useDispatch } from "react-redux"
 import { user_token } from "./store/actions/userActions"
+import { getCartProducts } from "./store/actions/cartActions"
 
 
 
@@ -15,6 +16,10 @@ import { user_token } from "./store/actions/userActions"
 function App() {
 
   const dispatch = useDispatch();
+
+  
+
+    
 
   useEffect(()=>{
     let url = `http://localhost:8000/api/auth/token`;

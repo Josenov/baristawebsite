@@ -129,7 +129,7 @@ const SignIn = () => {
                         <button onClick={handleSignIn} type="submit" className="bg-[#C8A178] hover:bg-[#B0662E] text-white font-semibold rounded-md py-2 px-4 w-full">Iniciar Sesión</button>
                     </form>
 
-                    <ModalPopup isOpen={isModalOpen} onClose={closeModal} message={modalMessage}/>
+                    <ModalPopup isOpen={isModalOpen} onClose={closeModal} message={modalMessage} title={'Iniciar Sesion'}/>
 
                     <div className="mt-6 text-[#B0662E] text-center">
                         <RouterLink to='/signup' className="hover:underline">Crear Cuenta</RouterLink>

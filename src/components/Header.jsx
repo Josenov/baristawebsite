@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useEffect } from 'react'
 /* import CartContext, { CartProvider } from '../context/CartContext' */
 import { AiOutlineUser, AiOutlineShoppingCart, AiOutlinePhone, AiOutlineSearch } from 'react-icons/ai'
 import Sidenav from './Sidenav'
@@ -6,6 +6,7 @@ import { Link as RouterLink } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { user_signout } from '../store/actions/userActions'
 import { addToCart } from '../store/actions/cartActions'
+import { getCartProducts } from '../store/actions/cartActions'
 
 import Cart from './Cart'
 
@@ -24,10 +25,20 @@ import Cart from './Cart'
 const Header = () => {
 
     
+    
 
     const [showSignOutBtn, setShowSignOutBtn] = useState(false);
 
     const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch(getCartProducts());
+
+    }, [dispatch])
+
+  
+
+    
 
     const userImgDefault = 'https://www.svgrepo.com/show/420331/avatar-lazybones-sloth.svg'
 
@@ -35,10 +46,15 @@ const Header = () => {
 
 
     const user = useSelector(store => store.userReducer.user)
+
+    
+
     
     /* console.log(user) */
 
     /* const userImageDefault =  */
+
+    
 
 
     return (
@@ -46,7 +62,7 @@ const Header = () => {
 
             
 
-            <div className='h-24 w-full  flex items-center  bg-[#F9F6F1]  justify-between p-4 fixed md:relative z-[10]'>
+            <div className='h-24 w-full  flex items-center  bg-[#F9F6F1]  justify-between p-4 fixed md:relative z-10 '>
 
                 
 
