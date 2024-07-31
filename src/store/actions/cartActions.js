@@ -59,11 +59,13 @@ export const addToCart = createAsyncThunk('addToCart', async (product) => {
     try {
         if (query === "del" && amount === 1 ) {
             await axios.delete(`http://localhost:8000/api/cartProducts/${id}`);
-            return { id }; // Return the deleted item's id for reducer handling
+            const response = await axios.get('http://localhost:8000/api/cartProducts');
+            return { id, cartProducts: response.data.cartProducts }; // Return the deleted item's id for reducer handling
         } else {
             await axios.put(`http://localhost:8000/api/cartProducts/${id}?query=${query}`, { amount: amount  });
             ; // Return updated information for reducer handling
-            return { id, query, amount }
+            const response = await axios.get('http://localhost:8000/api/cartProducts');
+            return { id, query, amount, cartProducts: response.data.cartProducts }
 
         }
 

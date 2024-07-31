@@ -10,12 +10,16 @@ const Cart = () => {
 
     const dispatch = useDispatch()
 
-    const cartItems = useSelector(state => state.cartReducer.cartProducts);
-
     useEffect(() => {
         dispatch(getCartProducts());
 
     }, [dispatch])
+
+    const cartItems = useSelector(state => state.cartReducer.cartProducts);
+
+    
+
+    
 
     const [cartOpen, setCartOpen] = useState();
 
@@ -80,7 +84,7 @@ const Cart = () => {
 
     const closeModal = () => {
         setCartOpen(false);
-        dispatch(getCartProducts())
+        
         
     };
 

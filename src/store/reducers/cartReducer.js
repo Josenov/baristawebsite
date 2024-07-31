@@ -30,9 +30,17 @@ const cartReducer = createReducer(initialState,
             if (existingItemIndex !== -1) {
                 // If item exists, increase its quantity
                 state.cartProducts[existingItemIndex].amount += action.payload.amount;
+                 
+                 
+                 
+                
+                
             } else {
                 // If item doesn't exist, add it to cart
                 state.cartProducts.push(action.payload);
+                
+                
+                
             }
         })
         .addCase(addToCart.rejected, (state, action) => {
@@ -46,17 +54,19 @@ const cartReducer = createReducer(initialState,
 
         .addCase(editItemToCart.fulfilled, (state, action) => {
             state.status = 'succeeded';
-            const { id, query, amount } = action.payload;
+            const { id, query, amount, cartProducts } = action.payload;
             const updatedItemIndex = state.cartProducts.findIndex(item => item._id === id);
             if (updatedItemIndex !== -1) {
                 if (query === "add") {
                     state.cartProducts[updatedItemIndex].amount += 1;
+                    
         
                 } else if (query === "del") {
                     state.cartProducts[updatedItemIndex].amount -= 1;
                     
-                    if (state.cartProducts[updatedItemIndex].amount <= 0) {
-                        state.cartProducts.splice(updatedItemIndex, 1);}
+                    
+                    /* if (state.cartProducts[updatedItemIndex].amount <= 0) {
+                        state.cartProducts.splice(updatedItemIndex, 1);} */
                     // If amount goes to zero, remove the item from cart
                     /* if (state.cartProducts[updatedItemIndex].amount <= 0) {
                         state.cartProducts[updatedItemIndex].amount = 0
@@ -64,7 +74,7 @@ const cartReducer = createReducer(initialState,
                         
                     }  */
 
-                       
+                        
             
                 }
 
@@ -74,6 +84,9 @@ const cartReducer = createReducer(initialState,
             } else {
                 console.log('Producto no encontrado en el carrito:', id);
             }
+
+            
+            state.cartProducts = cartProducts;
 
             
         })
