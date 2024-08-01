@@ -20,7 +20,9 @@ const dispatch = useDispatch();
     /* console.log("state changed") */
   }
 
-
+  const closeBurguerMenu = () => {
+    setBurguerMenu(false);
+  }
 
 
   return (
@@ -36,33 +38,30 @@ const dispatch = useDispatch();
 
         </div>
 
-        {
-
-
-
-          burguerMenu ? (
-
-            <div className='fixed md:hidden font-pro left-0   h-screen   bg-[#C8A178] flex flex-col items-center justify-start text-white w-[70%] z-[80]'>
+        {burguerMenu && (
+          <>
+            <div
+              className="fixed inset-0 bg-black opacity-50 z-[70] blur-3xl"
+              onClick={closeBurguerMenu}
+            ></div>
+            <div className='fixed md:hidden font-pro left-0 h-screen top-0 bg-[#C8A178] flex flex-col items-center justify-start text-white w-[70%] z-[80]'>
               <div className='flex items-center justify-center gap-2 mt-[100px] '>
                 <input className='rounded-full w-48 h-10 md:w-56 pl-5 text-black' type="text" placeholder='buscar...' />
                 <AiOutlineSearch className='h-6 w-6 text-white' />
               </div>
               <div className='flex flex-col text-xl p-2 m-5 gap-5 mt-5 '>
-
                 <RouterLink to='/' onClick={handleBurguerMenu}>Home</RouterLink>
                 <RouterLink to='/topProducts' onClick={handleBurguerMenu}>Productos Top</RouterLink>
                 <RouterLink to='/specialProducts' onClick={handleBurguerMenu}>Productos Especiales</RouterLink>
                 <RouterLink to='/contact' onClick={handleBurguerMenu}>Contacto</RouterLink>
                 <RouterLink to='/about' onClick={handleBurguerMenu}>Sobre Nosotros</RouterLink>
-
               </div>
-
-
-
               <div className='bg-[#B0662E]  h-full w-full flex items-center justify-center flex-col'>
                 <div className='flex items-center gap-2 border border-solid border-white bg-transparent p-2 mt-[-50px]'>
-                  {user?null : <AiOutlineUser className='text-lg ' />}
-                  {user?<button onClick={()=>dispatch(user_signout())}>Cerrar Sesión</button>:<RouterLink className='' to="/signin" onClick={handleBurguerMenu}>Iniciar Sesion</RouterLink>}
+                  {user ? null : <AiOutlineUser className='text-lg ' />}
+                  {user
+                    ? <button onClick={() => dispatch(user_signout())}>Cerrar Sesión</button>
+                    : <RouterLink className='' to="/signin" onClick={handleBurguerMenu}>Iniciar Sesion</RouterLink>}
                 </div>
                 <div className="flex mt-3 gap-4  text-white ">
                   <a className="hover:opacity-75" href="" target="_blank" rel="noreferrer">
@@ -84,14 +83,14 @@ const dispatch = useDispatch();
                     </svg>
                   </a>
 
-
+                  
                 </div>
+
+                <img className='h-40 w-40 mt-10'src="../coffeelogo.png" alt="" />
               </div>
-
-
             </div>
-          ) : null
-        }
+          </>
+        )}
 
       </div>
 

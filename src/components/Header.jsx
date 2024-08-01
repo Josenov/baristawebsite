@@ -91,7 +91,7 @@ const Header = () => {
                 
                     <RouterLink to="/signin" className=''> {user ? 
                     
-                    <div className='flex gap-2 items-center font-pro '>
+                    <div className='flex gap-2 items-center font-pro md:ml-[-140px] '>
                         <div className='flex flex-col  items-center'>
                         <p className='hidden md:flex '>Hola {user.name}!</p> 
                             <button onClick={()=>dispatch(user_signout())} className='text-sm  rounded-full md:w-24 h-5  font-thin flex items-center justify-center ' >Cerrar Sesión</button>
