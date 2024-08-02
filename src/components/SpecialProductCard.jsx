@@ -89,8 +89,11 @@ const SpecialProductCard = () => {
                     
                     {/* <del className='text-sm text-slate-500'>$6500</del> */}
                   </div>
+                  <div className='flex flex-col items-center'>
+                  <p className='text-sm'>Agregar al carrito</p>
+                  <button onClick={()=>dispatch(addToCart(specialProduct)) } className=' flex justify-center items-center  rounded-lg  w-12 border-2 border-[#C8A178] p-1 mt-2'><FaCartPlus className='w-8 h-8 text-[#C8A178] ' /></button>
+                  </div>
                   
-                  <button onClick={()=>dispatch(addToCart(specialProduct)) } className=' flex justify-center items-center border-2 border-[#C8A178] rounded-lg  w-16 mt-3'><FaCartPlus className='w-8 h-8 text-[#C8A178] ' /></button>
                   
                 </div>
               </SwiperSlide>

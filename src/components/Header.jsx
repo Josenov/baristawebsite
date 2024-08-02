@@ -75,7 +75,7 @@ const Header = () => {
 
                 </div>
 
-                <div className='ml-[160px] md:ml-0'>
+                <div className='ml-[140px] md:ml-0'>
                 <RouterLink to='/'>
                     <img src="/coffeelogo.png" className='w-16 h-16 md:w-20 md:h-20' alt="" />
                 </RouterLink>

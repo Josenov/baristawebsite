@@ -40,6 +40,7 @@ const BlogCard = () => {
 
 
             }}
+            
             navigation = {{
                 clickable:true
               }}

@@ -57,7 +57,7 @@ const dispatch = useDispatch();
                 <RouterLink to='/about' onClick={handleBurguerMenu}>Sobre Nosotros</RouterLink>
               </div>
               <div className='bg-[#B0662E]  h-full w-full flex items-center justify-center flex-col'>
-                <div className='flex items-center gap-2 border border-solid border-white bg-transparent p-2 mt-[-50px]'>
+                <div className='flex items-center gap-2 border border-solid border-white bg-transparent p-2 mt-[-10px]'>
                   {user ? null : <AiOutlineUser className='text-lg ' />}
                   {user
                     ? <button onClick={() => dispatch(user_signout())}>Cerrar Sesión</button>
@@ -86,7 +86,7 @@ const dispatch = useDispatch();
                   
                 </div>
 
-                <img className='h-40 w-40 mt-10'src="../coffeelogo.png" alt="" />
+                <img className='h-20 w-20  mt-5'src="../coffeelogo.png" alt="" />
               </div>
             </div>
           </>

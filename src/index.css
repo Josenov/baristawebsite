@@ -18,5 +18,35 @@
       align-items: center;
       
       
+      
     }
+
+    
+
+    .swiper-button-next,
+.swiper-button-prev {
+  width: 40px; 
+  height: 40px; 
+  background-color: #C8A178; 
+  border-radius: 50%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 50%;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 20px; 
+  color: #fff; 
+}
+
+.swiper-button-next {
+  right: 10px; 
+}
+
+.swiper-button-prev {
+  left: 10px; 
+}
+
 }

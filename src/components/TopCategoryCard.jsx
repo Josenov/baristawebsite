@@ -20,6 +20,9 @@ const TopCategoryCard = () => {
             
             
         }}
+        navigation = {{
+            clickable:true
+          }}
         modules={[Pagination, Navigation]}
         className="mySwiper rounded-md w-screen text-center    h-48 md:hidden " >
 

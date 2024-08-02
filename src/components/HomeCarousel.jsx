@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Pagination, Navigation } from "swiper/modules";
+import { Pagination, Navigation, Autoplay } from "swiper/modules";
 
 const HomeCarousel = () => {
     return (
@@ -18,7 +18,11 @@ const HomeCarousel = () => {
 
 
             }}
-            modules={[Pagination, Navigation]}
+            autoplay={{
+                delay: 3500,
+                disableOnInteraction: false,
+            }}
+            modules={[Pagination, Navigation, Autoplay]}
             className="mySwiper   w-screen text-center flex items-center justify-center  h-full md:hidden mt-[-50px] " >
 
 

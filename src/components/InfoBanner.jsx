@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Pagination, Navigation } from "swiper/modules";
+import { Pagination, Navigation, Autoplay } from "swiper/modules";
 
 const InfoBanner = () => {
     return (
@@ -13,13 +13,17 @@ const InfoBanner = () => {
             loop={true}
             slidesPerView={1}
             spaceBetween={0}
-            pagination={{
+            /* pagination={{
                 clickable: true,
                 dynamicBullets: true
 
 
+            }} */
+            autoplay={{
+                delay: 3500,
+                disableOnInteraction: false,
             }}
-            modules={[Pagination, Navigation]}
+            modules={[Pagination, Navigation, Autoplay]}
             className="mySwiper   w-screen text-center flex items-center justify-center  h-36 md:hidden mt-28 mb-6"
 
         >
