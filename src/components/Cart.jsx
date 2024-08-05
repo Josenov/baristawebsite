@@ -153,7 +153,7 @@ const Cart = () => {
 
             <div>
                 { cartOpen && (
-                    <div className=' fixed z-[100]  inset-0 top-24 md:left-[750px] md:top-[95px] md:rounded-lg md:w-[500px] md:h-auto overflow-y-scroll' >
+                    <div className=' fixed z-[100]  inset-0 top-24 md:left-[860px] md:top-[95px] md:rounded-lg md:w-[400px] md:h-auto  overflow-auto' >
                         <div className='  bg-[#222222]   text-white'>
                             <div>
                                 <h2 className=' bg-[#C8A178] h-10 md:h-16 text-xl text-white text-center flex justify-center items-center shadow-lg'>Tu Carrito</h2>
@@ -172,7 +172,7 @@ const Cart = () => {
                             {cartItems.length === 0 ? <div className='flex items-center  justify-center md:mt-5 md:text-xl rounded-xl text-center h-16'> Tu Carrito esta vacio</div>
                                 : (
                                     <div className='h-auto '>
-                                        {cartItems?.map((item) => (
+                                        {cartItems.map((item) => (
                                             <ItemCart key={item._id} item={item} />
 
                                         ))}

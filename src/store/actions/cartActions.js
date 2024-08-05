@@ -41,13 +41,32 @@ export const addToCart = createAsyncThunk('addToCart', async (product) => {
             image,
             price,
             description
+
+            
         });
-        return response.data
+
+        
+       /*  return ({
+            specialProd: response.data.specialProd,
+            
+            
+        }) */
+
+        return response.data.specialProd
+
+        
 
     } catch (error) {
-        console.error(error.response.data.message)
-        throw error;
+        console.log(error)
+        return {
+            
+                
+                message:error.response.data.message,
+                
+            }
     }
+
+    
 }
 );
 

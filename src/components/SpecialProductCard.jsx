@@ -9,15 +9,61 @@ import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper/modules";
 import { addToCart } from '../store/actions/cartActions'
 import { useDispatch, useSelector } from 'react-redux'
+import CartModalPopup from './CartModalPopup';
+
 
 
 const SpecialProductCard = () => {
+
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [modalMessage, setModalMessage] = useState('');
+    const [modalTimeout, setModalTimeout] = useState(null);
 
   const dispatch = useDispatch();
   
   const  cart  = useSelector(cart => cart.cartReducer.cartProducts);
 
   console.log(cart)
+
+  const handleAddToCart = async (product) =>{
+
+    
+
+    try {
+        const response = await dispatch(addToCart(product));
+
+        console.log(response)
+
+        setModalMessage(response.payload.message);
+
+        setIsModalOpen(true);
+
+        setModalTimeout(setTimeout(() => {
+          closeModal();
+        }, 2000));
+
+        
+        
+        
+        
+        
+    } catch (error) {
+        setModalMessage(error.message)
+    }
+
+    
+
+}
+
+const closeModal = () => {
+  
+    setIsModalOpen(false);
+  
+    
+    
+
+  };
 
   
 
@@ -38,6 +84,7 @@ const SpecialProductCard = () => {
  // console.log(specialProducts)
 
   return (
+    <div>
 
     <Swiper
       centeredSlides={true}
@@ -91,7 +138,7 @@ const SpecialProductCard = () => {
                   </div>
                   <div className='flex flex-col items-center'>
                   <p className='text-sm'>Agregar al carrito</p>
-                  <button onClick={()=>dispatch(addToCart(specialProduct)) } className=' flex justify-center items-center  rounded-lg  w-12 border-2 border-[#C8A178] p-1 mt-2'><FaCartPlus className='w-8 h-8 text-[#C8A178] ' /></button>
+                  <button onClick={()=>handleAddToCart(specialProduct) } className=' flex justify-center items-center  rounded-lg  w-12 border-2 border-[#C8A178] p-1 mt-2'><FaCartPlus className='w-8 h-8 text-[#C8A178] ' /></button>
                   </div>
                   
                   
@@ -112,6 +159,8 @@ const SpecialProductCard = () => {
       
     </Swiper>
 
+    <CartModalPopup  isOpen={isModalOpen} onClose={closeModal} message={modalMessage} title={'Iniciar Sesion'}/>
+    </div>
   )
 }
 
