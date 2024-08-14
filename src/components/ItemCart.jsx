@@ -61,7 +61,7 @@ const ItemCart = ({ item }) => {
 
     
 
-    console.log(localAmount)
+    
 
 
     
@@ -81,7 +81,7 @@ const ItemCart = ({ item }) => {
 
 
     return (
-        <div className='md:max-h-[200px] m-5 p-2  bg-[#fafafa] flex md:m-4  items-center justify-center md:gap-8 text-black rounded-lg'>
+        <div className='md:max-h-[200px] m-4 p-3 gap-2  bg-[#fafafa] flex  md:m-4  items-center justify-center md:gap-8 text-black rounded-lg'>
             <div className=''>
             <img className='h-32 w-32 object-cover ' src={item.image} alt={item.title} />
             </div>
@@ -105,7 +105,7 @@ const ItemCart = ({ item }) => {
                 </div>
                 <div className='mt-4 text-center'>
 
-                    <p>Total $ {localAmount * item.price}</p>
+                    <p>Total : $ {localAmount * item.price}</p>
                 </div>
             </div>
         </div>

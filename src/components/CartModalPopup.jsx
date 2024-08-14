@@ -1,11 +1,12 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
+import { Link as RouterLink } from 'react-router-dom'
 
 
 const CartModalPopup = ({title,  isOpen, onClose, message }) => {
   
     const cartItems = useSelector(state => state.cartReducer.cartProducts);
-    console.log(cartItems)
+   
     const okImg = 'https://cdn-icons-png.flaticon.com/512/7595/7595571.png'
     const deniedImg = 'https://static-00.iconduck.com/assets.00/denied-icon-1024x1024-2uhyid6q.png'
     
@@ -16,11 +17,11 @@ const CartModalPopup = ({title,  isOpen, onClose, message }) => {
                 }`}
         >
             <div className="flex items-center justify-center min-h-screen text-center">
-                <div className="bg-white rounded-lg shadow-lg p-6 w-48 h-54">
+                <div className="bg-white rounded-lg shadow-lg p-6 w-48 h-54 border-2 border-green-600 m-2">
                     
                     <div className="flex flex-col items-center justify-center">
                         <img className='h-24 w-24 mb-5' src={cartItems?okImg:deniedImg}alt="" />
-                        <p className="text-gray-700 text-center w-48 text-sm">{message?message:'Producto Agregado!'}</p>
+                        <p className="text-gray-700 text-center w-48 text-sm">{message?message:'Producto agregado al carrito!'}</p>
                         
                         
                     </div>

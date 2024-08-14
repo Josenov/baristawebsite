@@ -17,28 +17,28 @@ const ModalPopup = ({title,  isOpen, onClose, message }) => {
         <div
             className={`fixed z-10 inset-0  ${isOpen ? 'block' : 'hidden'
                 }`}
-        >
+        > 
             <div className="flex items-center justify-center min-h-screen text-center">
-                <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-md">
+                <div className= {`bg-white rounded-lg shadow-lg p-6 w-96 h-46 ${user!==null? 'border-2 border-green-600'   :  'border-2 border-red-600'} m-2`} >
                     <div className="flex justify-end">
                         <button
-                            className="text-gray-500 hover:text-gray-700"
+                            className="text-gray-500 hover:text-gray-700 text-3xl"
                             onClick={onClose}
                         >
                             &times;
                         </button>
                     </div>
-                    <div className="flex flex-col items-center justify-center">
-                        <img className='h-36 w-36 mb-5' src={user?okImg:deniedImg}alt="" />
-                        <p className="text-gray-700 text-center w-48">{message}</p>
-                        {!user? <Link
+                    <div className="flex flex-col items-center justify-center h-full ">
+                        <img className='h-36 w-36 object-cover mb-5' src={user?okImg:deniedImg}alt="" />
+                        <p className="text-gray-700 text-center w-48 text-xl">{message}</p>
+                        {/* {!user? <Link
                             
                             to="/signin"
                             className="bg-[#C8A178] hover:bg-[#B0662E] text-white font-bold py-2 px-4 rounded mt-4"
                         >
                             {title}
                         </Link>: null
-                        }
+                        } */}
                         
                     </div>
                 </div>

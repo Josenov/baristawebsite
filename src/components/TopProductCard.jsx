@@ -55,8 +55,8 @@ const TopProductCard = () => {
     
     return (
         <>
-            <div className="flex text-lg  items-center ">
-                        <button onClick={() => handleButtonClick('clasicos')} className={`p-2 rounded-full md:w-36 h-8 mt-3 font-semibold flex items-center justify-center ${activeButton === 'clasicos' ? 'bg-[#C8A178] text-white' : 'text-gray-500'}`}>Clasicos</button>
+            <div className="flex text-lg  items-center justify-center  h-16  ">
+                        <button onClick={() => handleButtonClick('clasicos')} className={`p-2 rounded-full md:w-48 h-8 mt-3 font-semibold flex items-center justify-center ${activeButton === 'clasicos' ? 'bg-[#C8A178] text-white' : 'text-gray-500'}`}>Clasicos</button>
                         <button onClick={() => handleButtonClick('nuevos')} className={`p-2 rounded-full md:w-36 h-8 mt-3 font-semibold flex items-center justify-center ${activeButton === 'nuevos' ? 'bg-[#C8A178] text-white' : 'text-gray-500'}`}>Nuevos</button>
                         <button onClick={() => handleButtonClick('mas_vendidos')} className={`p-2 rounded-full md:w-36 h-8 mt-3 font-semibold flex items-center justify-center ${activeButton === 'mas_vendidos' ? 'bg-[#C8A178] text-white' : 'text-gray-500'}`}>Mas vendidos</button>
                     </div>
@@ -75,18 +75,21 @@ const TopProductCard = () => {
 
                     }
                 }}
-                pagination={{
-                    clickable: true,
-                    dynamicBullets: true
-
-
-                }}
+                
                 navigation = {{
                     clickable:true
                   }}
 
+                  pagination={{
+                    clickable: true,
+                    dynamicBullets: false,
+                    
+
+
+                }}
+
                 modules={[Pagination, Navigation]}
-                className="mySwiper rounded-md   text-center flex items-center justify-center flex-col w-screen  h-[490px]  "
+                className="mySwiper rounded-md   text-center flex items-center justify-center flex-col w-screen h-[500px] mt-[-15px]   md:h-[600px]  "
 
 
 
@@ -132,7 +135,7 @@ const TopProductCard = () => {
                                         
                                         <div className='flex items-center gap-1'>
                                             <p className='text-2xl font-bold'>$ {product.price}</p>
-                                            {/* <del className='text-sm text-slate-500'>$6500</del> */}
+                                            
                                         </div>
 
                                     </SwiperSlide>

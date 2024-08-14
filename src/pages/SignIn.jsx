@@ -45,7 +45,7 @@ const SignIn = () => {
                 
             }));
 
-            console.log(data)
+            
             
             setModalMessage(data.payload.message);
 
@@ -86,7 +86,7 @@ const SignIn = () => {
 
     const userData = useSelector(store=>store.userReducer)
 
-    /* console.log(userData) */
+    
 
     
 
@@ -94,18 +94,20 @@ const SignIn = () => {
         <>
 
 
-            <div className="bg-gray-100 flex flex-col md:flex-row justify-center items-center  h-screen font-pro">
+            <div className="bg-gray-100 flex flex-col md:flex-row justify-center items-center  h-screen mt-5 md:mt-0 font-pro">
 
                 <RouterLink to='/'  className="md:hidden border border-solid border-black p-2 bg-transparent text-black font-thin rounded-md ">Volver a Home</RouterLink>
 
                 <div className="w-1/2 h-screen hidden lg:block">
                     <img className="object-cover h-full w-full" src="https://w0.peakpx.com/wallpaper/162/1011/HD-wallpaper-coffee-by-window-street-coffee-window-cup-ai-art.jpg" alt="Placeholder Image"  />
                 </div>
-
-                <div  className="lg:p-36 md:p-52 sm:20 p-8 w-full lg:w-1/2 font-thin">
-                    <h1 className="text-2xl font-semibold mb-4">Inicio de Sesión</h1>
+                
+                <div  className="lg:p-36 md:p-52 sm:20 p-8 w-full lg:w-1/2 font-thin ">
+                <div className='flex items-center justify-center '>
+                <h1 className="text-2xl font-semibold mb-5">Inicio de Sesión</h1>
+                </div>
                     
-                    <div className='flex justify-center items-center'>
+                    <div className='flex justify-center items-center m-2'>
                             <GoogleSignInButton/>
                         </div>
                     <form onSubmit={handleSignIn} action="" method="POST">
@@ -135,6 +137,7 @@ const SignIn = () => {
                         <RouterLink to='/signup' className="hover:underline">Crear Cuenta</RouterLink>
                     </div>
                 </div>
+                <img src="/coffeelogo.png" className='w-24 h-24 md:w-20 md:h-20 md:hidden' alt="" />
             </div>
 
 

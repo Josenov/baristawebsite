@@ -34,7 +34,7 @@ const Cart = () => {
 
     
 
-    console.log(cartItems)
+    
 
     
 
@@ -72,9 +72,7 @@ const Cart = () => {
 
 
 
-    console.log('Total:', total);
-
-    console.log('Cart Items:', cartItems)
+    
 
     
     
@@ -104,7 +102,7 @@ const Cart = () => {
                 
                     {!cartOpen ? (
                         <svg
-                            className="w-8 h-8 flex items-center justify-center mt-[-25px]"
+                            className="w-8 h-8 flex items-center justify-center mt-[-18px]"
                             width={"35px"}
                             viewBox="0 0 30 25"
                             fill="none"

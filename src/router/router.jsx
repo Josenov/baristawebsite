@@ -8,6 +8,8 @@ import SpecialProducts from "../pages/SpecialProducts";
 import TopProducts from "../pages/TopProducts";
 import Main from "../layout/Main";
 import ProtectedRoutes from "./ProtectedRoutes";
+import Cart from "../components/Cart";
+import UnderConstructionPage from "../components/UnderConstructionPage";
 
 
 export const router = createBrowserRouter([
@@ -62,6 +64,16 @@ export const router = createBrowserRouter([
             {
                 path:'/topProducts',
                 element:<TopProducts/>
+            },
+
+            {
+                path:'/cart',
+                element:<Cart/>
+            },
+
+            {
+                path:'/underConstruction',
+                element:<UnderConstructionPage/>
             }
 
         ]

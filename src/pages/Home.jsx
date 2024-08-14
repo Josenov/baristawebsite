@@ -6,7 +6,7 @@ import BlogCard from "../components/BlogCard"
 import BrandsCarousel from "../components/BrandsCarousel"
 import Carousel from '../components/Carousel'
 import TopCategoryCard from "../components/TopCategoryCard"
-
+import { Link as RouterLink } from 'react-router-dom';
 import HomeCarousel from "../components/HomeCarousel"
 import InfoBanner from "../components/InfoBanner"
 
@@ -15,7 +15,7 @@ import InfoBanner from "../components/InfoBanner"
 const Home = () => {
     return (
         <>
-        <div className=' font-pro'>
+        <div className=' font-pro bg-[#ffff]'>
             <Carousel />
             <InfoBanner />
             <div className='hidden md:flex flex-wrap md:mt-64 items-center justify-center gap-4 m-10 mt-32 md:gap-24 text-left  font-semibold'>
@@ -67,17 +67,17 @@ const Home = () => {
                     <div>
                         <img src="https://media.istockphoto.com/id/1411994205/es/foto/caf%C3%A9-moca-helado-con-crema-en-un-vaso-alto-y-granos-de-caf%C3%A9-portafiltro-tamper-y-jarra-de.jpg?s=612x612&w=0&k=20&c=G4-ZrqUMguJ1PXTC_P8YT4pnaoOwEpAwmCfErGstOR8=" className="h-48 w-72 object-cover rounded-xl" alt="" />
                         <p className="mt-[-100px] text-white flex items-center justify-center">Cafe Mocha</p>
-                        <a href="" className="  flex items-center justify-center text-sm text-gray-300 mt-2">ver mas</a>
+                        <RouterLink to='/underConstruction' className=" text-lg  text-gray-200 border border-solid bg-transparent p-1 ml-28">ver más</RouterLink>
                     </div>
                     <div>
                         <img src="https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2023/12/07/cafe-expresso.jpeg" className="h-48 w-72 object-cover rounded-xl" alt="" />
                         <p className="mt-[-100px] text-white flex items-center justify-center">Espresso</p>
-                        <a href="" className="  flex items-center justify-center text-sm text-gray-300 mt-2">ver mas</a>
+                        <RouterLink to='/underConstruction' className=" text-lg  text-gray-200 border border-solid bg-transparent p-1 ml-28">ver más</RouterLink>
                     </div>
                     <div>
                         <img src="https://cdn.pixabay.com/photo/2016/08/03/05/33/latte-1565931_1280.jpg" className="h-48 w-72 object-cover rounded-xl" alt="" />
                         <p className="mt-[-100px] text-white flex items-center justify-center">Capuccino</p>
-                        <a href="" className="  flex items-center justify-center text-sm text-gray-300 mt-2">ver mas</a>
+                        <RouterLink to='/underConstruction' className=" text-lg  text-gray-200 border border-solid bg-transparent p-1 ml-28">ver más</RouterLink>
                     </div>
                 </div>
                 <div className="flex items-center justify-center  ">
@@ -142,7 +142,7 @@ const Home = () => {
 
                 </div>
 
-                <div className="flex flex-col justify-center text-center">
+                <div className="flex flex-col justify-center text-center mt-4">
                     <p className="text-sm">Nos Recomiendan:</p>
                     <BrandsCarousel />
                 </div>

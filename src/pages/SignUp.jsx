@@ -60,7 +60,7 @@ const SignUp = () => {
 
     return (
         <>
-            <div className="bg-gray-100 flex flex-col md:flex-row justify-center items-center h-screen font-pro">
+            <div className="bg-gray-100 flex flex-col md:flex-row justify-center items-center h-screen font-pro mt-9">
 
             <RouterLink to='/'  className="md:hidden border border-solid border-black p-2 bg-transparent text-black font-thin rounded-md ">Volver a Home</RouterLink>
 
@@ -103,6 +103,8 @@ const SignUp = () => {
 
                     
                 </div>
+
+                <img src="/coffeelogo.png" className='w-24 h-24 md:w-20 md:h-20' alt="" />
             </div>
 
 

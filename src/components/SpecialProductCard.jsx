@@ -24,7 +24,7 @@ const SpecialProductCard = () => {
   
   const  cart  = useSelector(cart => cart.cartReducer.cartProducts);
 
-  console.log(cart)
+  
 
   const handleAddToCart = async (product) =>{
 
@@ -111,16 +111,16 @@ const closeModal = () => {
         clickable:true
       }}
       modules={[Pagination, Navigation]}
-      className="mySwiper rounded-md  w-screen text-center flex items-center justify-center    " >
+      className="mySwiper rounded-md  w-screen text-center flex items-center justify-center h-full  " >
 
-<div className="flex items-center justify-center text-center   ">
+<div className="flex items-center justify-center text-center ">
         {
           specialProducts?.map((specialProduct) => {
             return (
 
-              <SwiperSlide key={specialProduct._id} className="  rounded-lg mb-5">
+              <SwiperSlide key={specialProduct._id} className="  rounded-lg mb-5   ">
                 {/* <p className='bg-[#C8A178] rounded-full text-white w-10 text-center text-sm m-2 '>-20%</p> */}
-                <div className='grid grid-rows-[auto, auto, auto, auto, auto]  justify-items-center h-[500px]  rounded-lg'>
+                <div className='grid grid-rows-[auto, auto, auto, auto, auto]  justify-items-center h-[500px]   rounded-lg'>
                   <img className='object-cover h-64' src={specialProduct.image} alt="" />
                   <div className='flex mt-2 p-2'>
                     <AiFillStar className='h-3 text-[#C8A178]' />
@@ -131,15 +131,20 @@ const closeModal = () => {
                   </div>
                   <p className='text-lg'>{specialProduct.title}</p>
                   <button className='p-3 rounded-full md:w-36 h-8 mt-3  flex items-center justify-center text-sm bg-[#C8A178] text-white'>Mas Info</button>
-                  <div className='flex items-center'>
-                    <p className='text-2xl font-bold mt-2'>$ {specialProduct.price}</p>
+                  <div className='flex flex-col items-center justify-center'>
+                  <p className='text-2xl font-bold mt-2'>$ {specialProduct.price}</p>
+                  <div className='flex flex-col items-center justify-center'>
+                  <p className='text-sm'>Agregar al carrito</p>
+                  <button onClick={()=>handleAddToCart(specialProduct) } className=' flex justify-center items-center  rounded-full   w-14 h-14 border-2 border-[#C8A178] p-1 mt-2 mr-2'><FaCartPlus className='w-8 h-8 text-[#C8A178] ' /></button>
+                  
+                  </div>
+                  
+                    
+                    
                     
                     {/* <del className='text-sm text-slate-500'>$6500</del> */}
                   </div>
-                  <div className='flex flex-col items-center'>
-                  <p className='text-sm'>Agregar al carrito</p>
-                  <button onClick={()=>handleAddToCart(specialProduct) } className=' flex justify-center items-center  rounded-lg  w-12 border-2 border-[#C8A178] p-1 mt-2'><FaCartPlus className='w-8 h-8 text-[#C8A178] ' /></button>
-                  </div>
+                  
                   
                   
                 </div>

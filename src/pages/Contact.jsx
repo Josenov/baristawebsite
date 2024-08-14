@@ -1,8 +1,10 @@
 import React from 'react'
+import UnderConstructionPage from '../components/UnderConstructionPage'
+
 
 const Contact = () => {
   return (
-    <div className='h-screen'>Contact</div>
+    <UnderConstructionPage/>
   )
 }
 
