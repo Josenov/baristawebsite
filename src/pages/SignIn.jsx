@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Link as RouterLink, useNavigate } from 'react-router-dom'
 import { user_image, user_signin } from '../store/actions/userActions'
 import { useState } from 'react'
-import axios from 'axios'
+
 import GoogleSignInButton from '../components/GoogleSignInButton'
 import ModalPopup from '../components/ModalPopup';
 

@@ -11,6 +11,8 @@ import getTopProducts from "../store/actions/topProductActions";
 
 
 
+
+
 const TopProductCard = () => {
     
 
@@ -27,9 +29,7 @@ const TopProductCard = () => {
 
     useEffect(() => {
 
-        /* axios.get('http://localhost:8000/api/topProducts')
-            .then(response => setTopProducts(response.data.topProductList))
-            .catch(err => console.log(err)) */
+       
 
 
         //Redux Async

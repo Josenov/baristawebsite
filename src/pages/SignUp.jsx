@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react'
 import { Link as RouterLink, useNavigate } from 'react-router-dom'
 import ModalPopup from '../components/ModalPopup';
+import apiUrl from '../utils/api';
 
 
 
@@ -33,7 +34,7 @@ const SignUp = () => {
         event.preventDefault();
 
         try {
-            const response = await axios.post('http://localhost:8000/api/auth/signup', formData)
+            const response = await axios.post(`${apiUrl}/auth/signup`, formData)
             console.log(response)
             
             setModalMessage(response.data.message);

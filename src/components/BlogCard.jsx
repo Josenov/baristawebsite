@@ -6,13 +6,15 @@ import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper/modules";
 import axios from 'axios';
 import { Link as RouterLink } from 'react-router-dom';
+import apiUrl from '../utils/api';
+
 
 
 const BlogCard = () => {
     const [blogs, setBlogs] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:8000/api/blogs')
+        axios.get(`${apiUrl}/blogs`)
             .then(response => setBlogs(response.data.blogs))
             .catch(err => console.log(err))
 

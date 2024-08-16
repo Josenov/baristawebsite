@@ -5,6 +5,8 @@ import { user_signin_google } from '../store/actions/userActions';
 import axios from 'axios';
 import ModalPopup from './ModalPopup';
 import { useNavigate } from 'react-router-dom';
+import apiUrl from '../utils/api';
+
 
 
 
@@ -44,7 +46,7 @@ const GoogleSignInButton = () => {
             }
     
     
-            const userResponse = await axios.post('http://localhost:8000/api/auth/googlesignin', data)
+            const userResponse = await axios.post(`${apiUrl}/auth/googlesignin`, data)
 
             dispatch(user_signin_google(userResponse.data.response))
 
@@ -106,26 +108,7 @@ const GoogleSignInButton = () => {
 
 
 
-/* const handleCredentialResponse = async (response) => {
-    
-    
 
-    const data = {
-        token_id: response.credential
-    }
-
-
-    const userResponse = await axios.post('http://localhost:8000/api/auth/googlesignin', data)
-
-   
-
-
-
-
-    dispatch(user_signin_google(userResponse.data.response))
-
-
-} */
 export default GoogleSignInButton
 
 

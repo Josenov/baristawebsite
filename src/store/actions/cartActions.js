@@ -1,5 +1,6 @@
 import { createAction, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import apiUrl from "../../utils/api";
 
 
 
@@ -10,7 +11,7 @@ export const getCartProducts = createAsyncThunk('getCartProducts', async () => {
 
     try {
 
-        const response = await axios.get('http://localhost:8000/api/cartProducts')
+        const response = await axios.get(`${apiUrl}/cartProducts`)
 
 
 
@@ -36,7 +37,7 @@ export const getCartProducts = createAsyncThunk('getCartProducts', async () => {
 export const addToCart = createAsyncThunk('addToCart', async (product) => {
     try {
         const { title, image, price, description } = product;
-        const response = await axios.post("http://localhost:8000/api/cartProducts", {
+        const response = await axios.post(`${apiUrl}/cartProducts`, {
             title,
             image,
             price,
@@ -77,13 +78,13 @@ export const addToCart = createAsyncThunk('addToCart', async (product) => {
  export const editItemToCart = createAsyncThunk('editItemToCart', async ({ id, query, amount }) => { // Include id as a parameter
     try {
         if (query === "del" && amount === 1 ) {
-            await axios.delete(`http://localhost:8000/api/cartProducts/${id}`);
-            const response = await axios.get('http://localhost:8000/api/cartProducts');
+            await axios.delete(`${apiUrl}/cartProducts/${id}`);
+            const response = await axios.get(`${apiUrl}/cartProducts`);
             return { id, cartProducts: response.data.cartProducts }; // Return the deleted item's id for reducer handling
         } else {
-            await axios.put(`http://localhost:8000/api/cartProducts/${id}?query=${query}`, { amount: amount  });
+            await axios.put(`${apiUrl}/cartProducts/${id}?query=${query}`, { amount: amount  });
             ; // Return updated information for reducer handling
-            const response = await axios.get('http://localhost:8000/api/cartProducts');
+            const response = await axios.get(`${apiUrl}/cartProducts`);
             return { id, query, amount, cartProducts: response.data.cartProducts }
 
         }

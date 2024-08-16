@@ -1,5 +1,6 @@
 import { createAction, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import apiUrl from "../../utils/api";
 
 
 export const user_image = createAction('user_image', (obj)=>{
@@ -14,7 +15,7 @@ export const user_signin = createAsyncThunk ('user_signin', async (obj)=>{
     
     try {
 
-        const {data} = await axios.post('http://localhost:8000/api/auth/signin',obj.data)
+        const {data} = await axios.post(`${apiUrl}/auth/signin`,obj.data)
             console.log(data.message)
             localStorage.setItem('token', (data.response.token));
             localStorage.setItem('user', JSON.stringify(data.response.user));

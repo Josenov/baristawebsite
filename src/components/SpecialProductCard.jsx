@@ -10,6 +10,8 @@ import { Pagination, Navigation } from "swiper/modules";
 import { addToCart } from '../store/actions/cartActions'
 import { useDispatch, useSelector } from 'react-redux'
 import CartModalPopup from './CartModalPopup';
+import apiUrl from '../utils/api';
+
 
 
 
@@ -74,7 +76,7 @@ const closeModal = () => {
   const [specialProducts, setSpecialProducts] = useState();
 
   useEffect(() => {
-    axios.get('http://localhost:8000/api/specialProducts')
+    axios.get(`${apiUrl}/specialProducts`)
       .then(response => setSpecialProducts(response.data.specialProductsList))
       .catch(err => console.log(err))
   }, [])
