@@ -13,7 +13,7 @@ const ModalPopup = ({title,  isOpen, onClose, message }) => {
     const okImg = 'https://cdn-icons-png.flaticon.com/512/7595/7595571.png'
     const deniedImg = 'https://static-00.iconduck.com/assets.00/denied-icon-1024x1024-2uhyid6q.png'
 
-    console.log(user)
+    
 
     const isSuccess = message && message.toLowerCase().includes("exito");
 

@@ -39,7 +39,7 @@ const TopProductCard = () => {
 
 
 
-    //console.log(topProducts)
+    
 
     const handleButtonClick = (button) => {
         setActiveButton(button);

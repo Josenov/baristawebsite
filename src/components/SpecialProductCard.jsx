@@ -36,7 +36,7 @@ const SpecialProductCard = () => {
     try {
         const response = await dispatch(addToCart(product));
 
-        console.log(response)
+        
 
         setModalMessage(response.payload.message);
 
@@ -84,7 +84,7 @@ const closeModal = () => {
 
   
 
- // console.log(specialProducts)
+
 
   return (
     <div>

@@ -28,14 +28,14 @@ const SignUp = () => {
         })
         
     }
-    console.log(formData)
+    
 
     const handleSignUp = async (event) =>{
         event.preventDefault();
 
         try {
             const response = await axios.post(`${apiUrl}/auth/signup`, formData)
-            console.log(response)
+            
             
             setModalMessage(response.data.message);
 
