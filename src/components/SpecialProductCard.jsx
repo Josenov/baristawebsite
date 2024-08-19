@@ -11,6 +11,7 @@ import { addToCart } from '../store/actions/cartActions'
 import { useDispatch, useSelector } from 'react-redux'
 import CartModalPopup from './CartModalPopup';
 import apiUrl from '../utils/api';
+import { AiOutlineShoppingCart } from "react-icons/ai";
 
 
 
@@ -137,7 +138,7 @@ const closeModal = () => {
                   <p className='text-2xl font-bold mt-2'>$ {specialProduct.price}</p>
                   <div className='flex flex-col items-center justify-center'>
                   <p className='text-sm'>Agregar al carrito</p>
-                  <button onClick={()=>handleAddToCart(specialProduct) } className=' flex justify-center items-center  rounded-full   w-14 h-14 border-2 border-[#C8A178] p-1 mt-2 mr-2'><FaCartPlus className='w-8 h-8 text-[#C8A178] ' /></button>
+                  <button onClick={()=>handleAddToCart(specialProduct) } className=' flex justify-center items-center  rounded-full   w-14 h-14 border-2 border-[#C8A178] p-1 mt-2 mr-2'><AiOutlineShoppingCart className='h-8 w-8  text-[#C8A178]'   /></button>
                   
                   </div>
                   

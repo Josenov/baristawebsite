@@ -50,7 +50,8 @@ const SignUp = () => {
             
 
         } catch (error) {
-            console.log(error)
+            setModalMessage(error.response.data.message);
+            setIsModalOpen(true);
         }
     }
 

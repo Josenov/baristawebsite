@@ -13,13 +13,17 @@ const ModalPopup = ({title,  isOpen, onClose, message }) => {
     const okImg = 'https://cdn-icons-png.flaticon.com/512/7595/7595571.png'
     const deniedImg = 'https://static-00.iconduck.com/assets.00/denied-icon-1024x1024-2uhyid6q.png'
 
+    console.log(user)
+
+    const isSuccess = message && message.toLowerCase().includes("exito");
+
     return (
         <div
             className={`fixed z-10 inset-0  ${isOpen ? 'block' : 'hidden'
                 }`}
         > 
             <div className="flex items-center justify-center min-h-screen text-center">
-                <div className= {`bg-white rounded-lg shadow-lg p-6 w-96 h-46 ${user!==null? 'border-2 border-green-600'   :  'border-2 border-red-600'} m-2`} >
+                <div className= {`bg-white rounded-lg shadow-lg p-6 w-96 h-46 ${user || isSuccess ? 'border-2 border-green-600'   :  'border-2 border-red-600'} m-2`} >
                     <div className="flex justify-end">
                         <button
                             className="text-gray-500 hover:text-gray-700 text-3xl"
@@ -29,7 +33,7 @@ const ModalPopup = ({title,  isOpen, onClose, message }) => {
                         </button>
                     </div>
                     <div className="flex flex-col items-center justify-center h-full ">
-                        <img className='h-36 w-36 object-cover mb-5' src={user?okImg:deniedImg}alt="" />
+                        <img className='h-36 w-36 object-cover mb-5' src={user|| isSuccess?okImg:deniedImg}alt="" />
                         <p className="text-gray-700 text-center w-48 text-xl">{message}</p>
                         {/* {!user? <Link
                             
